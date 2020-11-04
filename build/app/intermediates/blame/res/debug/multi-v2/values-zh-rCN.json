@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\APK\\appthoviet\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
+            "outputFile": "E:\\APK\\appThoViet\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\it\\.gradle\\caches\\transforms-2\\files-2.1\\fe4a70ea8f8ca535f33c4b85cd4f8017\\core-1.5.0-alpha01\\res\\values-zh-rCN\\values-zh-rCN.xml",
