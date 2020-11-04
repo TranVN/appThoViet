@@ -121,35 +121,7 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text('HotLine',
-                            style: TextStyle(
-                              fontSize: 16,
-                            )),
-                      ),
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text(
-                          'Zalo',
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  ActionCardButton()
                 ],
               ),
             ),
@@ -188,35 +160,7 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text('HotLine',
-                            style: TextStyle(
-                              fontSize: 16,
-                            )),
-                      ),
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text(
-                          'Zalo',
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  ActionCardButton()
                 ],
               ),
             ),
@@ -254,35 +198,7 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text('HotLine',
-                            style: TextStyle(
-                              fontSize: 16,
-                            )),
-                      ),
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text(
-                          'Zalo',
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  ActionCardButton()
                 ],
               ),
             ),
@@ -321,35 +237,7 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text('HotLine',
-                            style: TextStyle(
-                              fontSize: 16,
-                            )),
-                      ),
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text(
-                          'Zalo',
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  ActionCardButton()
                 ],
               ),
             ),
@@ -387,35 +275,7 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text('HotLine',
-                            style: TextStyle(
-                              fontSize: 16,
-                            )),
-                      ),
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text(
-                          'Zalo',
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  ActionCardButton()
                 ],
               ),
             ),
@@ -454,35 +314,7 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text('HotLine',
-                            style: TextStyle(
-                              fontSize: 16,
-                            )),
-                      ),
-                      FlatButton(
-                        textColor: Colors.white,
-                        color: Colors.deepPurple[300],
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text(
-                          'Zalo',
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  ActionCardButton()
                 ],
               ),
             ),
@@ -527,6 +359,33 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
           titleSection
         ],
       ),
+    );
+  }
+}
+
+class ActionCardButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ButtonBar(
+      alignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        IconButton(
+          icon: Icon(Icons.call),
+          color: Colors.blue,
+          tooltip: 'Hotline: 0903532938',
+          onPressed: () {
+            launch("tel://0903532938");
+          },
+        ),
+        IconButton(
+          icon: Icon(Icons.message),
+          color: Colors.blue,
+          tooltip: 'Zalo me : 0903532938',
+          onPressed: () {
+            launch('https://zalo.me/0903532938');
+          },
+        ),
+      ],
     );
   }
 }

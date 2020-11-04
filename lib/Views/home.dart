@@ -81,7 +81,9 @@ class HomeStateWidget extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: new ListView(
+        body: new Container(
+      color: Colors.white,
+      child: ListView(
         padding: const EdgeInsets.all(10),
         children: <Widget>[
           titleSection,
@@ -273,7 +275,7 @@ class HomeStateWidget extends State<HomeWidget> {
                     style: TextStyle(
                         color: Colors.red,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18),
+                        fontSize: 16),
                   ),
                 ),
                 Image.asset(
@@ -285,7 +287,7 @@ class HomeStateWidget extends State<HomeWidget> {
           ),
         ],
       ),
-    );
+    ));
   }
 }
 
@@ -320,13 +322,13 @@ void _dVkhac(context) {
                       ),
                     ),
                     Padding(
-                        padding: EdgeInsets.fromLTRB(10, 10, 260, 10),
+                        padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                         child: new Text(
                           'Khám phá dịch vụ',
-                          textAlign: TextAlign.left,
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                            fontSize: 20,
                           ),
                         )),
                     new GridView.count(
@@ -406,7 +408,12 @@ class DVTV extends StatelessWidget {
               height: 60,
               fit: BoxFit.cover,
             ),
-            Text(titleDVTV),
+            new Text(
+              titleDVTV,
+              style: TextStyle(
+                fontSize: 12,
+              ),
+            ),
           ],
         ),
       ],
