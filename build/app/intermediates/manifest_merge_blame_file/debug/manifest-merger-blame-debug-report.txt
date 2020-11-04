@@ -28,10 +28,10 @@
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 24-->[androidx.core:core:1.5.0-alpha01] C:\Users\it\.gradle\caches\transforms-2\files-2.1\fe4a70ea8f8ca535f33c4b85cd4f8017\core-1.5.0-alpha01\AndroidManifest.xml:24:18-86
 25        android:debuggable="true"
-26        android:icon="@mipmap/ic_launcher"
-26-->E:\APK\appThoViet\android\app\src\main\AndroidManifest.xml:11:9-43
-27        android:label="appthoviet" >
-27-->E:\APK\appThoViet\android\app\src\main\AndroidManifest.xml:10:9-35
+26        android:icon="@mipmap/ic_launcher_round"
+26-->E:\APK\appThoViet\android\app\src\main\AndroidManifest.xml:11:9-49
+27        android:label="Thợ Việt" >
+27-->E:\APK\appThoViet\android\app\src\main\AndroidManifest.xml:10:9-33
 28        <activity
 28-->E:\APK\appThoViet\android\app\src\main\AndroidManifest.xml:12:9-40:20
 29            android:name="com.thoviet.appthoviet.MainActivity"

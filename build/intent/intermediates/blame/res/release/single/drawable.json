@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\APK\\appThoViet\\build\\intent\\intermediates\\res\\merged\\release\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\it\\.gradle\\caches\\transforms-2\\files-2.1\\fe4a70ea8f8ca535f33c4b85cd4f8017\\core-1.5.0-alpha01\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "E:\\APK\\appThoViet\\build\\intent\\intermediates\\res\\merged\\release\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\it\\.gradle\\caches\\transforms-2\\files-2.1\\fe4a70ea8f8ca535f33c4b85cd4f8017\\core-1.5.0-alpha01\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "E:\\APK\\appThoViet\\build\\intent\\intermediates\\res\\merged\\release\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\it\\.gradle\\caches\\transforms-2\\files-2.1\\fe4a70ea8f8ca535f33c4b85cd4f8017\\core-1.5.0-alpha01\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "E:\\APK\\appThoViet\\build\\intent\\intermediates\\res\\merged\\release\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\it\\.gradle\\caches\\transforms-2\\files-2.1\\fe4a70ea8f8ca535f33c4b85cd4f8017\\core-1.5.0-alpha01\\res\\drawable\\notification_bg_low.xml"
+    }
+]

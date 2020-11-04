@@ -69,20 +69,14 @@ class HomeWidget extends StatefulWidget {
 }
 
 class HomeStateWidget extends State<HomeWidget> {
-  Widget titleSection = new Container(
-    width: 400,
-    height: 200,
-    decoration: BoxDecoration(
-      image: DecorationImage(
-        image: NetworkImage(
-            'https://thoviet.com.vn/wp-content/uploads/2020/01/tapthe-2-e1597391698731.png'),
-        fit: BoxFit.cover,
-      ),
-      borderRadius: BorderRadius.all(
-        Radius.circular(10.0),
-      ),
+  Widget titleSection = new ClipRRect(
+    borderRadius: BorderRadius.all(Radius.circular(8.0)),
+    child: Image.asset(
+      'lib/images/tapthecty.png',
+      fit: BoxFit.cover,
+      height: 200,
+      width: 400,
     ),
-    padding: const EdgeInsets.all(5),
   );
   @override
   Widget build(BuildContext context) {

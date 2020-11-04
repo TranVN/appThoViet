@@ -50,9 +50,9 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\it
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0-alpha01] C:\Users\it\.gradle\caches\transforms-2\files-2.1\fe4a70ea8f8ca535f33c4b85cd4f8017\core-1.5.0-alpha01\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from E:\APK\appThoViet\android\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from E:\APK\appThoViet\android\app\src\main\AndroidManifest.xml:10:9-33
 	android:icon
-		ADDED from E:\APK\appThoViet\android\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from E:\APK\appThoViet\android\app\src\main\AndroidManifest.xml:11:9-49
 	android:name
 		ADDED from E:\APK\appThoViet\android\app\src\main\AndroidManifest.xml:9:9-57
 activity#com.thoviet.appthoviet.MainActivity

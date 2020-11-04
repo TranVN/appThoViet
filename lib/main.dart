@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // screen rotation lock flutter https://medium.com/@greymag/flutter-orientation-lock-portrait-only-c98910ebd769
-    WidgetsFlutterBinding.ensureInitialized();
+    //WidgetsFlutterBinding.ensureInitialized();
     // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
     //     .then((value) => runApp(MyApp()));
     return MaterialApp(

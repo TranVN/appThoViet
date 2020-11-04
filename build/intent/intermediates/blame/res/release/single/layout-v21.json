@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\APK\\appThoViet\\build\\intent\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\it\\.gradle\\caches\\transforms-2\\files-2.1\\fe4a70ea8f8ca535f33c4b85cd4f8017\\core-1.5.0-alpha01\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "E:\\APK\\appThoViet\\build\\intent\\intermediates\\res\\merged\\release\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\it\\.gradle\\caches\\transforms-2\\files-2.1\\fe4a70ea8f8ca535f33c4b85cd4f8017\\core-1.5.0-alpha01\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "E:\\APK\\appThoViet\\build\\intent\\intermediates\\res\\merged\\release\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\it\\.gradle\\caches\\transforms-2\\files-2.1\\fe4a70ea8f8ca535f33c4b85cd4f8017\\core-1.5.0-alpha01\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "E:\\APK\\appThoViet\\build\\intent\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\it\\.gradle\\caches\\transforms-2\\files-2.1\\fe4a70ea8f8ca535f33c4b85cd4f8017\\core-1.5.0-alpha01\\res\\layout-v21\\notification_template_custom_big.xml"
+    }
+]
