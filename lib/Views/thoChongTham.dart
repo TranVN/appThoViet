@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ThoChongTham extends StatelessWidget {
   const ThoChongTham({Key key}) : super(key: key);
@@ -12,39 +10,6 @@ class ThoChongTham extends StatelessWidget {
         title: Text('Thợ Chống Thấm'),
       ),
       body: ThoChongThamWidget(),
-      floatingActionButton: SpeedDial(
-        animatedIcon: AnimatedIcons.menu_close,
-        animatedIconTheme: const IconThemeData(size: 22.0),
-        closeManually: true,
-        curve: Curves.bounceIn,
-        tooltip: 'Toggle options',
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
-        elevation: 8.0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
-        children: [
-          SpeedDialChild(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            child: Icon(Icons.call),
-            foregroundColor: Colors.white,
-            backgroundColor: Colors.blue,
-            onTap: () {
-              launch('tel://0903532938');
-            },
-          ),
-          SpeedDialChild(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            child: Icon(Icons.chat),
-            foregroundColor: Colors.white,
-            backgroundColor: Colors.blue,
-            onTap: () {
-              launch(('https://zalo.me/0903532938'));
-            },
-          ),
-        ],
-      ),
     );
   }
 }
@@ -73,32 +38,29 @@ class _ThoChongThamWidgetState extends State<ThoChongThamWidget> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            KDDV(
-              urlImg:
-                  'https://thoviet.com.vn/wp-content/uploads/2020/07/premium-quality.png',
-              titleKDDV: 'CHẤT LƯỢNG',
-              subKDDV: 'Đảm cao chất lượng cao nhất cho mọi công trình.',
-            ),
-            KDDV(
-              urlImg:
-                  'https://thoviet.com.vn/wp-content/uploads/2020/07/reputation.png',
-              titleKDDV: 'UY TÍN',
-              subKDDV:
-                  'Công Ty TNHH dịch vụ kỹ thuật Thợ Việt. Được thành lập từ năm 2011. Với đội ngũ phủ rộng khắp TP Hồ Chí Minh.',
-            ),
-            KDDV(
-              urlImg:
-                  'https://thoviet.com.vn/wp-content/uploads/2020/07/efficiency.png',
-              titleKDDV: 'HIỆU QUẢ CAO',
-              subKDDV:
-                  'Với tinh thần trách nghiệm cao, thợ chống thấm Thợ Việtluôn hướng tới dịch vụ nhanh chóng, hiệu quả cao.',
-            ),
-            new Text(
-              "Dịch vụ chống thấm của Thợ Việt",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
-              ),
+            new GridView.count(
+              padding: const EdgeInsets.all(5),
+              crossAxisCount: 3,
+              crossAxisSpacing: 5.0,
+              mainAxisSpacing: 5.0,
+              shrinkWrap: true,
+              children: <Widget>[
+                KDDV(
+                  urlImg:
+                      'https://thoviet.com.vn/wp-content/uploads/2020/07/premium-quality.png',
+                  titleKDDV: 'CHẤT LƯỢNG',
+                ),
+                KDDV(
+                  urlImg:
+                      'https://thoviet.com.vn/wp-content/uploads/2020/07/reputation.png',
+                  titleKDDV: 'UY TÍN',
+                ),
+                KDDV(
+                  urlImg:
+                      'https://thoviet.com.vn/wp-content/uploads/2020/07/efficiency.png',
+                  titleKDDV: 'HIỆU QUẢ CAO',
+                ),
+              ],
             ),
             DVChongTham(
               urlDVCT:
@@ -124,13 +86,6 @@ class _ThoChongThamWidgetState extends State<ThoChongThamWidget> {
               contentDVCT:
                   '+ Thi công sơn chống thấm. Xử lý nứt chân chim tường nhà.\n' +
                       '+ Và các tình trạng thấm khác.',
-            ),
-            new Text(
-              "Bảng Giá Thi Công Chống Thấm",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
-              ),
             ),
             TheBangGiaChongTham(
               titleCT: 'Phương án thi công chống thấm 1',
@@ -196,9 +151,9 @@ class _ThoChongThamWidgetState extends State<ThoChongThamWidget> {
               'Một số nguyên nhân khiến tường nhà bạn bị thấm:',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17),
             ),
             new Text('– Tường nhà bị thấm do trời mưa nhiều, lượng nước ngấm vào tường lớn. Bản chất của xi măng hút nước mạnh và có những mao quản (khoảng cách giữa các hạt) có đường kính khoảng từ 20 – 40 micromet. Do đó, khi bề mặt tường tiếp xúc với nước, những khe hở mao quản sẽ bị nước xâm nhập vào bên trong gây ra hiện tượng thấm.\n' +
                 '– Do vị trí các ống thoát nước sàn giáp lai tường nhà, rãnh nước trên sàn mái… Nước và hơi ẩm từ những nơi này có thể theo các vết nứt, mao mạch rỗng của tường thấm sâu vào bên trong. Theo thời gian, tường nhà bị nước thấm vào tạo nên từng mảng loang lổ với lớp sơn xuống cấp.\n' +
@@ -301,13 +256,8 @@ class DVChongTham extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.network(
-            urlDVCT,
-            fit: BoxFit.cover,
-            width: 400,
-            height: 200,
-          ),
           ListTile(
             title: Text(
               titleDVCT,
@@ -318,8 +268,14 @@ class DVChongTham extends StatelessWidget {
               ),
             ),
           ),
+          Image.network(
+            urlDVCT,
+            fit: BoxFit.cover,
+            width: 400,
+            height: 200,
+          ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(16.0, 5.0, 16.0, 5.0),
+            padding: const EdgeInsets.fromLTRB(16.0, 10.0, 16.0, 10.0),
             child: Text(
               contentDVCT,
               style: TextStyle(color: Colors.black.withOpacity(0.6)),
@@ -332,29 +288,44 @@ class DVChongTham extends StatelessWidget {
 }
 
 class KDDV extends StatelessWidget {
-  KDDV({this.urlImg, this.titleKDDV, this.subKDDV});
+  KDDV({
+    this.urlImg,
+    this.titleKDDV,
+  });
   final String urlImg;
   final String titleKDDV;
-  final String subKDDV;
+
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: ListTile(
-        leading: Image.network(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.network(
           urlImg,
           width: 60,
-          height: 60,
           fit: BoxFit.cover,
         ),
-        title: Text(
-          titleKDDV,
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-        ),
-        subtitle: Text(
-          subKDDV,
-          style: TextStyle(color: Colors.black.withOpacity(0.6)),
-        ),
-      ),
-    );
+        Padding(
+            padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+            child: Text(
+              titleKDDV,
+              textAlign: TextAlign.center,
+            ))
+      ],
+    )
+        //ListTile(
+        //   leading: Image.network(
+        //     urlImg,
+        //     width: 60,
+        //     height: 60,
+        //     fit: BoxFit.cover,
+        //   ),
+        //   title: Text(
+        //     titleKDDV,
+        //     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        //   ),
+        // ),
+        );
   }
 }
