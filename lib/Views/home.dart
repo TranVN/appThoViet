@@ -1,8 +1,5 @@
 import "package:flutter/material.dart";
 import 'thoChongTham.dart';
-
-import 'thoChongTham.dart';
-
 import 'thoDien.dart';
 import 'thoMoc.dart';
 import 'thoDienLanh.dart';
@@ -226,6 +223,36 @@ class HomeStateWidget extends State<HomeWidget> {
                 ),
               ),
             ],
+          ),
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: Text(
+              'Khuyến mãi',
+              textAlign: TextAlign.start,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              children: [
+                Image.asset(
+                  'lib/images/phieuGiamGia.jpg',
+                  width: 400,
+                  height: 205,
+                  fit: BoxFit.cover,
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(5, 10, 0, 10),
+                  child: Text(
+                    'Giảm giá 10% dịch vụ sửa điện nước hộ gia đình',
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                        color: Colors.red, fontWeight: FontWeight.bold),
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),
