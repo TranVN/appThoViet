@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:appthoviet/ViewModels/contentApp.dart';
+import 'package:appthoviet/ViewModels/BangGia.dart';
 
 class DoNuocRoRi extends StatelessWidget {
   @override
@@ -68,6 +70,7 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
                 "   Thợ Việt chuyên nhận dò tìm rò rỉ nước âm, kiểm tra đường ống nước bị bể ngầm và sửa chữa đường ống nước bể(vỡ) ngầm gây thất thoát nước cho hộ gia đình Tại Tp Hồ Chí Minh, Bình Dương, Đồng Nai.\n" +
                     '   Dò tìm rò rỉ nước cho tòa nhà khu công nghiệp tại các tỉnh Tiền Giang, Bến Tre, Vũng Tàu, Long An, Tây Ninh, Lâm Đồng, Bình Dương, Đồng Nai, ...'),
             new GridView.count(
+              primary: false,
               padding: const EdgeInsets.all(5),
               crossAxisCount: 2,
               crossAxisSpacing: 5.0,
@@ -107,31 +110,23 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
             new Text(
                 '   + Nhận dò tìm cho các tòa nhà, trường học, nhà máy, khu công nghiệp nội và ngoại thành TP Hồ Chí Minh.\n' +
                     '   + Xử lý các đường ống nước lớn bị rò rỉ nhanh chóng. Tiết kiệm thời gian và tiền bạc cho Khách Hàng.\n'),
-            new Text(
-              'Nguyên nhân dẫn tới rò rỉ nước',
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
+            ContentApp(
+              titleCTA: 'Nguyên nhân dẫn tới rò rỉ nước',
+              textCTA: '+ Khi mua nhà xây trọn gói thì đa số chủ đầu tư sẽ chọn những thiết bị kém chất lượng. Để tiết kiệm chi phí dẫn tới sử dụng được thời gian thì bị vỡ, bục.\n' +
+                  '+ Với đường ống nước đi âm nền thì việc nền nhà bị sụt lún cũng sẽ làm cho ống nước bị nứt, gãy.\n' +
+                  '+ Không có kế hoạch bảo dưỡng hoặc nâng cấp đúng thời gian. Cái gì cũng có tuổi thọ nhất định, ống nước cũng vậy. Sẽ bị bào mòn theo thời gian cộng với áp lực nước rất mạnh rất dễ dẫn đến bục gãy.\n',
             ),
-            new Text('+ Khi mua nhà xây trọn gói thì đa số chủ đầu tư sẽ chọn những thiết bị kém chất lượng. Để tiết kiệm chi phí dẫn tới sử dụng được thời gian thì bị vỡ, bục.\n' +
-                '+ Với đường ống nước đi âm nền thì việc nền nhà bị sụt lún cũng sẽ làm cho ống nước bị nứt, gãy.\n' +
-                '+ Không có kế hoạch bảo dưỡng hoặc nâng cấp đúng thời gian. Cái gì cũng có tuổi thọ nhất định, ống nước cũng vậy. Sẽ bị bào mòn theo thời gian cộng với áp lực nước rất mạnh rất dễ dẫn đến bục gãy.\n'),
-            new Text(
-              'Dấu hiệu cho thấy hiện tượng rò rỉ nước',
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
+            ContentApp(
+              titleCTA: 'Dấu hiệu cho thấy hiện tượng rò rỉ nước',
+              textCTA: '+ Hóa đơn tiền điện nước tăng đột ngột, mặc dù nhu cầu sử dụng không nhiều.\n' +
+                  '+ Đồng hồ nước vẫn quay khi tất cả thiết bị xã nước đều bị khóa.\n' +
+                  '+ Máy bơm hoạt động liên tục.\n' +
+                  '+ Có hiện tượng mọc rêu tại những đường ống nước đi qua...\n' +
+                  '+ Bồn chứa cạn nước vào buổi sáng, mặc dù không sử dụng vào tối hôm trước.\n' +
+                  '+ Áp lực nước yếu, ngay cả trong những thời gian dùng nước ít.\n' +
+                  '+ Hầu hết các hệ thống đường ống nước đều được thiết kế âm.' +
+                  'Do đó khi xảy ra hiện tượng rò rỉ nước thì rất khó khăn trong việc xác định vị trí rò rỉ. Vì vậy, bạn cần tìm đến dịch vụ dò tìm rò rỉ nước với kinh nghiệm cùng máy móc đầy đủ để khắc phục\n',
             ),
-            new Text('+ Hóa đơn tiền điện nước tăng đột ngột, mặc dù nhu cầu sử dụng không nhiều.\n' +
-                '+ Đồng hồ nước vẫn quay khi tất cả thiết bị xã nước đều bị khóa.\n' +
-                '+ Máy bơm hoạt động liên tục.\n' +
-                '+ Có hiện tượng mọc rêu tại những đường ống nước đi qua...\n' +
-                '+ Bồn chứa cạn nước vào buổi sáng, mặc dù không sử dụng vào tối hôm trước.\n' +
-                '+ Áp lực nước yếu, ngay cả trong những thời gian dùng nước ít.\n' +
-                '+ Hầu hết các hệ thống đường ống nước đều được thiết kế âm.' +
-                'Do đó khi xảy ra hiện tượng rò rỉ nước thì rất khó khăn trong việc xác định vị trí rò rỉ. Vì vậy, bạn cần tìm đến dịch vụ dò tìm rò rỉ nước với kinh nghiệm cùng máy móc đầy đủ để khắc phục'),
             new Card(
               clipBehavior: Clip.antiAlias,
               child: Column(
@@ -150,7 +145,7 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                 )),
-            BangGiaDoNuocRoRi(
+            BangGia(
               titleCT: 'Dò nước dò rỉ 1',
               contentCT: 'Sửa ống nước nổi rò rỉ\n' +
                   'Bồn cầu rò rỉ nước\n' +
@@ -159,13 +154,13 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
                   'Ghi chú: Không cần sử dụng máy dò tìm chuyên dụng',
               subtitleCT: 'Giá từ: 150,000 đ - 350,000 đ',
             ),
-            BangGiaDoNuocRoRi(
+            BangGia(
               titleCT: 'Dò nước dò rỉ 2',
               contentCT:
                   'Dò tìm đường ống nước trong gia đình bị bể ngầm không thấy vị trí bể, sử dụng máy dò chuyên dụng có thể dò được ống nước sâu hơn 2 mét. Dưới các lớp bê tông, đường nhựa, đất sét....',
               subtitleCT: 'Giá từ: 800,000 đ - 1,200,000 đ',
             ),
-            BangGiaDoNuocRoRi(
+            BangGia(
               titleCT: 'Dò nước dò rỉ 3',
               contentCT:
                   'Đối với công ty, nhà máy, khu dân cư, tòa nhà, khu công nghiệp... Thợ sẽ liên hệ, tiến hành khảo sát báo giá miễn phí! Lên kế hoạch, nhanh chóng thực hiện theo đúng kế hoạch đã thống nhất giữa 2 bên.',
@@ -234,44 +229,6 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
         titleSection
       ],
     ));
-  }
-}
-
-class BangGiaDoNuocRoRi extends StatelessWidget {
-  BangGiaDoNuocRoRi({this.titleCT, this.contentCT, this.subtitleCT});
-  final String titleCT;
-  final String contentCT;
-  final String subtitleCT;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: new Card(
-        color: Colors.grey[200],
-        clipBehavior: Clip.antiAlias,
-        child: Column(
-          children: [
-            new Text(titleCT,
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold)),
-            ListTile(
-              title: Text(contentCT),
-              subtitle: Text(
-                subtitleCT,
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                    color: Colors.blue,
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
   }
 }
 

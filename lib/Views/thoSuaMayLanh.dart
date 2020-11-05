@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:appthoviet/ViewModels/BangGiaCoHinh.dart';
 
 class ThoSuaMayLanh extends StatelessWidget {
   @override
@@ -80,84 +81,25 @@ class _ThoSuaMayLanhWigetState extends State<ThoSuaMayLanhWiget> {
                 fontSize: 16,
               ),
             ),
-            new Card(
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2019/02/suamaylanh.png',
-                    width: 400,
-                    height: 180,
-                    fit: BoxFit.cover,
-                  ),
-                  ListTile(
-                    title: const Text('Thay tụ chạy block máy nén máy 1-1,5hp',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold)),
-                    subtitle: Text(
-                      'Giá từ: 350.000đ',
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                          color: Colors.black87, fontStyle: FontStyle.italic),
-                    ),
-                  ),
-                ],
-              ),
+            BangGiaCoHinh(
+              urlimg:
+                  'https://thoviet.com.vn/wp-content/uploads/2019/02/suamaylanh.png',
+              titleBG: 'Thay tụ chạy block máy nén máy 1-1,5hp',
+              gia: 'Giá từ: 350.000đ',
             ),
-            new Card(
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2018/11/Tho-sua-may-lanh.jpg',
-                    width: 400,
-                    height: 180,
-                    fit: BoxFit.cover,
-                  ),
-                  ListTile(
-                    title: const Text('Thay tụ chạy block máy nén máy 2-2,5hp',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold)),
-                    subtitle: Text(
-                      'Giá từ: 450.000đ - 550.000đ',
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                          color: Colors.black87, fontStyle: FontStyle.italic),
-                    ),
-                  ),
-                ],
-              ),
+            BangGiaCoHinh(
+              urlimg:
+                  'https://thoviet.com.vn/wp-content/uploads/2018/11/Tho-sua-may-lanh.jpg',
+              titleBG: 'Thay tụ chạy block máy nén máy 2-2,5hp',
+              gia: 'Giá từ: 450.000đ - 550.000đ',
             ),
-            new Card(
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2017/03/Tho-dien-lanh-sua-may-lanh_tho-viet-2-e1541128658283.jpg',
-                    width: 400,
-                    height: 180,
-                    fit: BoxFit.cover,
-                  ),
-                  ListTile(
-                    title: const Text('Thay cánh quạt dàn nóng',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold)),
-                    subtitle: Text(
-                      'Giá từ: 300.000đ',
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                          color: Colors.black87, fontStyle: FontStyle.italic),
-                    ),
-                  ),
-                ],
-              ),
+            BangGiaCoHinh(
+              urlimg:
+                  'https://thoviet.com.vn/wp-content/uploads/2017/03/Tho-dien-lanh-sua-may-lanh_tho-viet-2-e1541128658283.jpg',
+              titleBG: 'Thay cánh quạt dàn nóng',
+              gia: 'Giá từ: 300.000đ',
             ),
+            //  chu doi
             new Card(
               clipBehavior: Clip.antiAlias,
               child: Column(

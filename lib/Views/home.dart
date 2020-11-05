@@ -332,6 +332,7 @@ void _dVkhac(context) {
                           ),
                         )),
                     new GridView.count(
+                      primary: false,
                       padding: const EdgeInsets.all(10),
                       crossAxisCount: 4,
                       crossAxisSpacing: 5.0,
