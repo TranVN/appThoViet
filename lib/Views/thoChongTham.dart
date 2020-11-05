@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:appthoviet/ViewModels/contentApp.dart';
 import 'package:appthoviet/ViewModels/BangGia.dart';
+import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
 class ThoChongTham extends StatelessWidget {
   const ThoChongTham({Key key}) : super(key: key);
@@ -33,14 +34,21 @@ class _ThoChongThamWidgetState extends State<ThoChongThamWidget> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(padding: EdgeInsets.all(5)),
-            new Text(
-              "Với cái tâm làm nghề Thợ Việt Luôn hướng tới dịch vụ tuyệt vời nhất cho mọi khách hàng. Thợ Việt luôn khẳng định dịch vụ với 3 yếu tố sau:",
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
+            Card(
+              shadowColor: Colors.grey,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                child: Text(
+                  "Với cái tâm làm nghề Thợ Việt Luôn hướng tới dịch vụ tuyệt vời nhất cho mọi khách hàng. Thợ Việt luôn khẳng định dịch vụ với 3 yếu tố sau:",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
             new GridView.count(
+              primary: false,
               padding: const EdgeInsets.all(5),
               crossAxisCount: 3,
               crossAxisSpacing: 5.0,
@@ -181,15 +189,8 @@ class _ThoChongThamWidgetState extends State<ThoChongThamWidget> {
     return Scaffold(
       body: new ListView(
         children: <Widget>[
-          Padding(padding: EdgeInsets.all(5)),
-          new Text(
-            "Thợ Chống Thấm Tại TPHCM",
-            textAlign: TextAlign.center,
-            style: new TextStyle(
-              fontSize: 24,
-              color: Colors.red,
-              fontWeight: FontWeight.bold,
-            ),
+          ChuDeTrang(
+            titleTrang: 'Thợ Chống Thấm Tại TPHCM',
           ),
           titleSection
         ],
@@ -265,19 +266,6 @@ class KDDV extends StatelessWidget {
               textAlign: TextAlign.center,
             ))
       ],
-    )
-        //ListTile(
-        //   leading: Image.network(
-        //     urlImg,
-        //     width: 60,
-        //     height: 60,
-        //     fit: BoxFit.cover,
-        //   ),
-        //   title: Text(
-        //     titleKDDV,
-        //     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-        //   ),
-        // ),
-        );
+    ));
   }
 }

@@ -1,7 +1,9 @@
+import 'package:appthoviet/ViewModels/contentApp.dart';
+import 'package:appthoviet/ViewModels/ctyThoViet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
-
+import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 // import 'package:thoviet/Shared/app_color.dart';
 
 class ThoDienLanh extends StatelessWidget {
@@ -69,24 +71,12 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(padding: EdgeInsets.all(5)),
-            new Text(
-              "Thợ điện lạnh là một phần trong đội ngũ của Công ty Thợ Việt. Với nhiều Thợ chuyên nhận thực hiện các công việc:",
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            new Text(
-                " – Lắp đặt,di rời, chuyển vị trí mới cho máy lạnh, tủ lạnh, máy giặt…"),
-            new Text(
-                " – Sửa chữa máy lạnh điều hòa, tủ lạnh, tủ đông, máy giăt…"),
-            new Text(
-                "– Bảo trì, vệ sinh điều hoà không khí, vệ sinh máy giặt,…"),
-            new Text(
-              "Dịch vụ điện lạnh Thợ Việt rất mong được phục vụ quý khách hàng, Thợ điện lạnh chuyên nhận sửa chữa, vệ sinh các sản phẩm liên quan tới điện lạnh như:",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
+            ContentApp(
+              titleCTA:
+                  'Thợ điện lạnh là một phần trong đội ngũ của Công ty Thợ Việt. Với nhiều Thợ chuyên nhận thực hiện các công việc:',
+              textCTA: '– Lắp đặt,di rời, chuyển vị trí mới cho máy lạnh, tủ lạnh, máy giặt…\n' +
+                  '– Sửa chữa máy lạnh điều hòa, tủ lạnh, tủ đông, máy giăt…\n' +
+                  '– Bảo trì, vệ sinh điều hoà không khí, vệ sinh máy giặt,…',
             ),
             Card(
               clipBehavior: Clip.antiAlias,
@@ -318,24 +308,7 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                 ],
               ),
             ),
-            new Text(
-              'Công ty TNHH Dịch vụ kỹ thuật Thợ Việt – Thợ điện lạnh:',
-              textAlign: TextAlign.start,
-              style: new TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
-            ),
-            new Text(
-                '– Với đội ngũ kỹ thuật viên có trình độ, tận tình, trang bị đầy đủ công cụ hiện đại đảm bảo cho quý khách hàng được phục vụ nhanh chóng, chất lượng…\n' +
-                    '– Tất cả các thiết bị lắp đặt, sửa chữa sẽ được bảo hành dài hạn.\n' +
-                    '– Mạng lưới phục vụ rộng khắp thành phố Hồ Chí Minh.'),
-            new Text(
-              'Thợ Việt với đội ngũ thợ điện lạnh lành nghề, uy tín, chất lượng, phục vụ nhiệt tình chu đáo, giá cả phải chăng.\n',
-              style: TextStyle(
-                fontStyle: FontStyle.italic,
-              ),
-            ),
+            CTYThoViet(),
           ],
         ))
       ],
@@ -346,15 +319,8 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
     return Scaffold(
       body: new ListView(
         children: <Widget>[
-          Padding(padding: EdgeInsets.all(5)),
-          new Text(
-            "Thợ Sửa - Lắp Đặt Điện Lạnh",
-            textAlign: TextAlign.center,
-            style: new TextStyle(
-              fontSize: 24,
-              color: Colors.red,
-              fontWeight: FontWeight.bold,
-            ),
+          ChuDeTrang(
+            titleTrang: 'Thợ Sửa - Lắp Đặt Điện Lạnh',
           ),
           titleSection
         ],

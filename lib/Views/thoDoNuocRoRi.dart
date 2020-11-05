@@ -1,8 +1,10 @@
+import 'package:appthoviet/ViewModels/ctyThoViet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/contentApp.dart';
 import 'package:appthoviet/ViewModels/BangGia.dart';
+import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
 class DoNuocRoRi extends StatelessWidget {
   @override
@@ -65,11 +67,15 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(padding: EdgeInsets.all(5)),
-            new Text(
-                "   Thợ Việt chuyên nhận dò tìm rò rỉ nước âm, kiểm tra đường ống nước bị bể ngầm và sửa chữa đường ống nước bể(vỡ) ngầm gây thất thoát nước cho hộ gia đình Tại Tp Hồ Chí Minh, Bình Dương, Đồng Nai.\n" +
-                    '   Dò tìm rò rỉ nước cho tòa nhà khu công nghiệp tại các tỉnh Tiền Giang, Bến Tre, Vũng Tàu, Long An, Tây Ninh, Lâm Đồng, Bình Dương, Đồng Nai, ...'),
-            new GridView.count(
+            Card(
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                child: Text(
+                    "   Thợ Việt chuyên nhận dò tìm rò rỉ nước âm, kiểm tra đường ống nước bị bể ngầm và sửa chữa đường ống nước bể(vỡ) ngầm gây thất thoát nước cho hộ gia đình Tại Tp Hồ Chí Minh, Bình Dương, Đồng Nai.\n" +
+                        '   Dò tìm rò rỉ nước cho tòa nhà khu công nghiệp tại các tỉnh Tiền Giang, Bến Tre, Vũng Tàu, Long An, Tây Ninh, Lâm Đồng, Bình Dương, Đồng Nai, ...'),
+              ),
+            ),
+            GridView.count(
               primary: false,
               padding: const EdgeInsets.all(5),
               crossAxisCount: 2,
@@ -105,11 +111,13 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
                 ),
               ],
             ),
-            new Text(
-                '   Với trang bị máy móc hiện đại. Thợ dò tìm nước rò rỉ của Thợ Việt nhận dò tìm nước thất thoát ở những vị trí khó nhất. Mà các đơn vị khác có thể không làm được:'),
-            new Text(
-                '   + Nhận dò tìm cho các tòa nhà, trường học, nhà máy, khu công nghiệp nội và ngoại thành TP Hồ Chí Minh.\n' +
-                    '   + Xử lý các đường ống nước lớn bị rò rỉ nhanh chóng. Tiết kiệm thời gian và tiền bạc cho Khách Hàng.\n'),
+            ContentApp(
+              titleCTA:
+                  'Với trang bị máy móc hiện đại. Thợ dò tìm nước rò rỉ của Thợ Việt nhận dò tìm nước thất thoát ở những vị trí khó nhất. Mà các đơn vị khác có thể không làm được:',
+              textCTA:
+                  '   + Nhận dò tìm cho các tòa nhà, trường học, nhà máy, khu công nghiệp nội và ngoại thành TP Hồ Chí Minh.\n' +
+                      '   + Xử lý các đường ống nước lớn bị rò rỉ nhanh chóng. Tiết kiệm thời gian và tiền bạc cho Khách Hàng.\n',
+            ),
             ContentApp(
               titleCTA: 'Nguyên nhân dẫn tới rò rỉ nước',
               textCTA: '+ Khi mua nhà xây trọn gói thì đa số chủ đầu tư sẽ chọn những thiết bị kém chất lượng. Để tiết kiệm chi phí dẫn tới sử dụng được thời gian thì bị vỡ, bục.\n' +
@@ -127,24 +135,6 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
                   '+ Hầu hết các hệ thống đường ống nước đều được thiết kế âm.' +
                   'Do đó khi xảy ra hiện tượng rò rỉ nước thì rất khó khăn trong việc xác định vị trí rò rỉ. Vì vậy, bạn cần tìm đến dịch vụ dò tìm rò rỉ nước với kinh nghiệm cùng máy móc đầy đủ để khắc phục\n',
             ),
-            new Card(
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2020/06/dhnuoc.jpg',
-                    width: 400,
-                    height: 180,
-                    fit: BoxFit.cover,
-                  ),
-                ],
-              ),
-            ),
-            new Text('Bảng giá tham khảo cho dịch vụ dò tìm rò rỉ nước:',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                )),
             BangGia(
               titleCT: 'Dò nước dò rỉ 1',
               contentCT: 'Sửa ống nước nổi rò rỉ\n' +
@@ -187,26 +177,7 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
               contentDVCT:
                   'Là máy dò tìm chuyên dụng dành cho các đường ống có dộ sâu lớn, qua nhiều vật liệu cứng như nền xi măng, đường nhựa, bê tông... sửa dụng công nghệ Xem và nghe rò rỉ với công nghệ DSA với chất lượng âm thanh cao.',
             ),
-            new Text(
-              'Công ty TNHH Dịch Vụ Kỹ Thuật Thợ Việt',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-              ),
-            ),
-            new Text(
-              '– Với đội ngũ kỹ thuật viên có trình độ, tận tình, trang bị đầy đủ công cụ hiện đại đảm bảo cho quý khách hàng được phục vụ nhanh chóng, chất lượng…\n' +
-                  '– Tất cả các thiết bị lắp đặt, sửa chữa sẽ được bảo hành dài hạn\n' +
-                  '– Mạng lưới phục vụ rộng khắp thành phố Hồ Chí Minh.',
-            ),
-            new Text(
-              'Thợ Việt với đội ngũ thợ chống thấm, điện lạnh, điện nước, vệ sinh,... lành nghề, uy tín, chất lượng, phục vụ nhiệt tình chu đáo, giá cả phải chăng.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
-            ),
+            CTYThoViet(),
           ],
         ))
       ],
@@ -217,14 +188,8 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
     return Scaffold(
         body: new ListView(
       children: <Widget>[
-        new Text(
-          "Chuyên Gia Dò Tìm Rò Rỉ Nước",
-          textAlign: TextAlign.center,
-          style: new TextStyle(
-            fontSize: 24,
-            color: Colors.red,
-            fontWeight: FontWeight.bold,
-          ),
+        ChuDeTrang(
+          titleTrang: "Chuyên Gia Dò Tìm Rò Rỉ Nước",
         ),
         titleSection
       ],

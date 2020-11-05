@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\APK\\appThoViet\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-vi\\values-vi.xml",
+            "outputFile": "E:\\appThoViet\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-vi\\values-vi.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\it\\.gradle\\caches\\transforms-2\\files-2.1\\fe4a70ea8f8ca535f33c4b85cd4f8017\\core-1.5.0-alpha01\\res\\values-vi\\values-vi.xml",
+                    "source": "C:\\Users\\win10\\.gradle\\caches\\transforms-2\\files-2.1\\fe4a70ea8f8ca535f33c4b85cd4f8017\\core-1.5.0-alpha01\\res\\values-vi\\values-vi.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

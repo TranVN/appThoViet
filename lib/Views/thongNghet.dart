@@ -1,8 +1,10 @@
+import 'package:appthoviet/ViewModels/ctyThoViet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/BangGiaCoHinh.dart';
 import 'package:appthoviet/ViewModels/contentApp.dart';
+import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
 class ThoThongNghet extends StatelessWidget {
   const ThoThongNghet({Key key}) : super(key: key);
@@ -68,15 +70,23 @@ class _ThoThongNghetWidgetState extends State<ThoThongNghetWidget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(padding: EdgeInsets.all(5)),
-            new Text(
-                "   Thợ Việt chuyên cung cấp dịch vụ thông tắc cầu cống tại HCM. Nhận thông bồn cầu, ống thoát nước, thoát sàn nhà vệ sinh. Xử lý triệt để các sự cố nghẹt nhanh chóng và triệt để. Với đội ngũ nhiều năm kinh nghiệm cùng trang thiết bị hiện đại. Hỗ trợ nhanh chóng với chi phí thấp nhất."),
-            new Text(
-              'Bảng Giá Thông Nghẹt',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
+            Card(
+              shadowColor: Colors.grey,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                child: Text(
+                    '   Thợ Việt chuyên cung cấp dịch vụ thông tắc cầu cống tại HCM. Nhận thông bồn cầu, ống thoát nước, thoát sàn nhà vệ sinh. Xử lý triệt để các sự cố nghẹt nhanh chóng và triệt để. Với đội ngũ nhiều năm kinh nghiệm cùng trang thiết bị hiện đại. Hỗ trợ nhanh chóng với chi phí thấp nhất.'),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+              child: Text(
+                'Bảng Giá Thông Nghẹt',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
               ),
             ),
             BangGiaCoHinh(
@@ -115,17 +125,27 @@ class _ThoThongNghetWidgetState extends State<ThoThongNghetWidget> {
                   '– Thông nghẹt toilet, bể phốt, chậu rửa, thoát sàn, các loại đường cống ngầm.\n' +
                   '– Lắp đặt hệ thống ngăn mùi, xử lý triệt để mùi hôi nhà vệ sinh.',
             ),
-            new Text(
-              'Thợ Việt có đội ngũ kỹ thuật viên nhiệt tình chu đáo, phong cách làm việc chuyên nghiệp và các máy móc hiện đại, đảm bảo mang đến cho khách hàng những dịch vụ tốt nhất với giá thành rẻ nhất. Khách hàng có thể hoàn toàn yên tâm khi sử dụng dịch vụ của Thợ Việt.\n',
-              style: TextStyle(
-                fontStyle: FontStyle.italic,
+            Card(
+              child: Padding(
+                padding: EdgeInsets.all(5),
+                child: Text(
+                  'Thợ Việt có đội ngũ kỹ thuật viên nhiệt tình chu đáo, phong cách làm việc chuyên nghiệp và các máy móc hiện đại, đảm bảo mang đến cho khách hàng những dịch vụ tốt nhất với giá thành rẻ nhất. Khách hàng có thể hoàn toàn yên tâm khi sử dụng dịch vụ của Thợ Việt.\n',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
               ),
             ),
-            new Text(
-              "Cách thông nghẹt bồn cầu tại nhà",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
+            Padding(
+              padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+              child: Text(
+                'Cách thông nghẹt bồn cầu tại nhà',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
               ),
             ),
             CachThongNghet(
@@ -161,16 +181,7 @@ class _ThoThongNghetWidgetState extends State<ThoThongNghetWidget> {
                   '+ Nguyên lý của miếng dán băng keo thực chất cũng giống như chiếc thụt cao su, chỉ khác ở chỗ nó bao trùm toàn bộ bồn cầu. Khi ấn xuống, không khí được đẩy thẳng vào ống, tạo ra sự chênh lệch về áp suất.\n' +
                   '+ Sau đó lực đàn hồi sẽ kéo miếng dán lên, tạo ra lực hút tác động lên vật thể gây tắc. Làm đi làm lại vài lần, bồn cầu sẽ đột nhiên thoát nước như chưa có gì xảy ra.',
             ),
-            new Text(
-              'Khi có nhu cầu thông nghẹt cầu cống tại HCM. Hãy liên hệ với Thợ Việt theo SĐT: 0903.532.938 để được tư vấn báo giá miễn phí. ',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.italic,
-                fontSize: 24,
-                color: Colors.teal[300],
-              ),
-            ),
+            CTYThoViet()
           ],
         ))
       ],
@@ -181,15 +192,8 @@ class _ThoThongNghetWidgetState extends State<ThoThongNghetWidget> {
     return Scaffold(
       body: new ListView(
         children: <Widget>[
-          Padding(padding: EdgeInsets.all(5)),
-          new Text(
-            "Thợ Thông Nghẹt ",
-            textAlign: TextAlign.center,
-            style: new TextStyle(
-              fontSize: 24,
-              color: Colors.red,
-              fontWeight: FontWeight.bold,
-            ),
+          ChuDeTrang(
+            titleTrang: 'Thợ Thông Nghẹt',
           ),
           titleSection
         ],

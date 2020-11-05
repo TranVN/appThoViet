@@ -1,7 +1,9 @@
+import 'package:appthoviet/ViewModels/contentApp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/BangGiaCoHinh.dart';
+import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
 class ThoSuaMayLanh extends StatelessWidget {
   @override
@@ -64,21 +66,25 @@ class _ThoSuaMayLanhWigetState extends State<ThoSuaMayLanhWiget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(padding: EdgeInsets.all(2.5)),
-            new Text(
-                "– Thợ sửa máy lạnh tại nhà – Dịch vụ sửa chữa điện lạnh giá rẻ Thợ Việt. Chuyên cung cấp các dịch vụ liên quan đến điện lạnh: vệ sinh máy lạnh, máy điều hòa, sửa máy lạnh máy điều hòa, sửa lò vi sóng, sửa máy rửa chén, máy lọc nước…"),
-            new Text(
-                "– Thi công lắp đặt, vệ sinh, xử lý sự cố xảy ra trên hệ thống VRV, VRF, hệ thống HVAC, hệ thống ống gió... của tòa nhà, nhà máy..."),
-            new Text(
-                "– Với đội ngũ chuyên nghiệp Thợ Việt sẽ đáp ứng mọi nhu cầu của Quý Khách."),
-            new Text(
-                "Để nhận được thông tin chi tiết về giá cũng như mọi thông tin liên quan Quý Khách vui lòng liên hệ hoặc để lại thông tin. Thợ Việt sẽ liên hệ lại sớm nhất để trao đổi với Quý Khách."),
-            new Text(
-              "Tham Khảo Bảng giá nhân công – vật tư điện lạnh.(Giá tham khảo)",
-              textAlign: TextAlign.start,
-              style: new TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
+            Card(
+              shadowColor: Colors.grey,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                child: Text('– Thợ sửa máy lạnh tại nhà – Dịch vụ sửa chữa điện lạnh giá rẻ Thợ Việt. Chuyên cung cấp các dịch vụ liên quan đến điện lạnh: vệ sinh máy lạnh, máy điều hòa, sửa máy lạnh máy điều hòa, sửa lò vi sóng, sửa máy rửa chén, máy lọc nước…\n' +
+                    '– Thi công lắp đặt, vệ sinh, xử lý sự cố xảy ra trên hệ thống VRV, VRF, hệ thống HVAC, hệ thống ống gió... của tòa nhà, nhà máy...\n' +
+                    '– Với đội ngũ chuyên nghiệp Thợ Việt sẽ đáp ứng mọi nhu cầu của Quý Khách.\n' +
+                    'Để nhận được thông tin chi tiết về giá cũng như mọi thông tin liên quan Quý Khách vui lòng liên hệ hoặc để lại thông tin. Thợ Việt sẽ liên hệ lại sớm nhất để trao đổi với Quý Khách.'),
+              ),
+            ),
+
+            Card(
+              child: Text(
+                "Tham Khảo Bảng giá nhân công – vật tư điện lạnh(Giá tham khảo)",
+                textAlign: TextAlign.center,
+                style: new TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
               ),
             ),
             BangGiaCoHinh(
@@ -153,19 +159,18 @@ class _ThoSuaMayLanhWigetState extends State<ThoSuaMayLanhWiget> {
                 ],
               ),
             ),
-            new Text(
-              'Nếu máy lạnh gặp những hư hỏng thường gặp sau:',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ContentApp(
+              titleCTA: 'Nếu máy lạnh gặp những hư hỏng thường gặp sau:',
+              textCTA: '+ Máy nén chạy và dừng liên tục do quá tải.' +
+                  '\n+ Máy chạy và ngưng liền.' +
+                  '\n+ Quạt dàn nóng, lạnh không chạy.' +
+                  '\n+ Máy nén không chạy hay chạy ồn.' +
+                  '\n+ Máy lạnh quá lạnh hoặc Máy lạnh không lạnh.' +
+                  '\n+ Ấp suất hút cao hoặc thấp.' +
+                  '\n+ Máy chạy liên tục nhưng không lạnh.' +
+                  '\n+ Hư block, lạnh xì gas do lắp đầu mới không đúng kỹ thuật.',
             ),
-            new Text('+ Máy nén chạy và dừng liên tục do quá tải.' +
-                '\n+ Máy chạy và ngưng liền.' +
-                '\n+ Quạt dàn nóng, lạnh không chạy.' +
-                '\n+ Máy nén không chạy hay chạy ồn.' +
-                '\n+ Máy lạnh quá lạnh hoặc Máy lạnh không lạnh.' +
-                '\n+ Ấp suất hút cao hoặc thấp.' +
-                '\n+ Máy chạy liên tục nhưng không lạnh.' +
-                '\n+ Hư block, lạnh xì gas do lắp đầu mới không đúng kỹ thuật.'),
+
             new Text(
               'Hãy liên hệ ngay dịch vụ sửa điện lạnh tại nhà của Thợ Việt!',
               textAlign: TextAlign.center,
@@ -173,6 +178,7 @@ class _ThoSuaMayLanhWigetState extends State<ThoSuaMayLanhWiget> {
                   color: Colors.red, fontWeight: FontWeight.bold, fontSize: 18),
             ),
             new GridView.count(
+              primary: false,
               padding: const EdgeInsets.all(5),
               crossAxisCount: 3,
               crossAxisSpacing: 5.0,
@@ -220,25 +226,22 @@ class _ThoSuaMayLanhWigetState extends State<ThoSuaMayLanhWiget> {
                 ),
               ],
             ),
-            new Text(
-              'Thợ Việt với quy trình sửa máy lạnh chuyên nghiệp:',
-              textAlign: TextAlign.start,
-              style: new TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
+            ContentApp(
+              titleCTA: 'Thợ Việt với quy trình sửa máy lạnh chuyên nghiệp:',
+              textCTA: '+ Tiếp nhận thông tin khách hàng từ tổng đài\n' +
+                  '+ Phân công kỹ thuật viên tới kiểm tra máy lạnh\n' +
+                  '+ Chuẩn đoán nguyên nhân hư hỏng và báo giá sửa chữa\n' +
+                  '+ Tiến hành khắc phục hư hỏng nếu khách hàng đồng ý\n' +
+                  '+ Kiểm tra vận hành trước khi bàn giao máy lạnh cho khách hàng\n' +
+                  '+ Viết phiếu thanh toán và bảo trì\n',
+            ),
+            Card(
+              child: Text(
+                'QUÝ KHÁCH VUI LÒNG LIÊN HỆ TRỰC TIẾP VĂN PHÒNG CÔNG TY QUA HOTLINE : 0903.532.938',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
-            new Text('+ Tiếp nhận thông tin khách hàng từ tổng đài\n' +
-                '+ Phân công kỹ thuật viên tới kiểm tra máy lạnh\n' +
-                '+ Chuẩn đoán nguyên nhân hư hỏng và báo giá sửa chữa\n' +
-                '+ Tiến hành khắc phục hư hỏng nếu khách hàng đồng ý\n' +
-                '+ Kiểm tra vận hành trước khi bàn giao máy lạnh cho khách hàng\n' +
-                '+ Viết phiếu thanh toán và bảo trì\n'),
-            new Text(
-              'QUÝ KHÁCH VUI LÒNG LIÊN HỆ TRỰC TIẾP VĂN PHÒNG CÔNG TY QUA HOTLINE : 0903.532.938',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-            )
           ],
         ))
       ],
@@ -249,14 +252,8 @@ class _ThoSuaMayLanhWigetState extends State<ThoSuaMayLanhWiget> {
     return Scaffold(
         body: new ListView(
       children: <Widget>[
-        new Text(
-          "Thợ Sửa Chữa Máy Lạnh",
-          textAlign: TextAlign.center,
-          style: new TextStyle(
-            fontSize: 24,
-            color: Colors.red,
-            fontWeight: FontWeight.bold,
-          ),
+        ChuDeTrang(
+          titleTrang: 'Thợ Sửa Chữa Máy Lạnh',
         ),
         titleSection
       ],

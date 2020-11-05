@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
 class VSNLMT extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Vệ Sinh Máy Năng Lượng Mặt Trời'),
+        title: Text('Năng Lượng Mặt Trời'),
       ),
       body: VSNLMTWidget(),
       floatingActionButton: SpeedDial(
@@ -182,14 +183,8 @@ class _VSNLMTWidgetState extends State<VSNLMTWidget> {
     return Scaffold(
         body: new ListView(
       children: <Widget>[
-        new Text(
-          "Vệ Sinh Máy Nước Nóng Năng Lượng Mặt Trời",
-          textAlign: TextAlign.center,
-          style: new TextStyle(
-            fontSize: 24,
-            color: Colors.red,
-            fontWeight: FontWeight.bold,
-          ),
+        ChuDeTrang(
+          titleTrang: 'Thiết Bị Năng Lượng Mặt Trời',
         ),
         titleSection
       ],

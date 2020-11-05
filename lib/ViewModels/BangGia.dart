@@ -9,12 +9,12 @@ class BangGia extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: new Card(
-        color: Colors.grey[100],
+        color: Colors.white,
         clipBehavior: Clip.antiAlias,
         child: Column(
           children: [
             new Text(titleCT,
-                textAlign: TextAlign.left,
+                textAlign: TextAlign.start,
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 20,

@@ -1,6 +1,8 @@
+import 'package:appthoviet/ViewModels/contentApp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
 class ThoMoc extends StatelessWidget {
   const ThoMoc({Key key}) : super(key: key);
@@ -66,13 +68,15 @@ class _ThoMocWidgetState extends State<ThoMocWidget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(padding: EdgeInsets.all(5)),
-            new Text(
-                "   Là một trong những đơn vị dẫn đầu về lĩnh vực sơn sửa đồ gỗ nội thất tại nhà. Chúng tôi luôn lấy tiêu chuẩn chất lượng cao để cung cấp dịch vụ khách hàng. Bằng việc sử dụng các công nghệ, máy móc hiện đại."),
-            new Text(
-                "   Cộng thêm đội ngũ thợ sửa chữa chuyên nghiệp, có tay nghề cao. Thợ Việt đã mang đến những giá trị thật sự về thời gian, chất lượng và giá cả."),
-            new Text(
-                "   Cho dù mục đích của bạn là sửa chữa, khôi phục hay thay đổi màu sắc đồ gỗ đề phù hợp với không gian sống. Đội ngũ nhân viên chúng tôi đều đáp một cách tốt nhất."),
+            Card(
+              shadowColor: Colors.grey,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                child: Text('   Là một trong những đơn vị dẫn đầu về lĩnh vực sơn sửa đồ gỗ nội thất tại nhà. Chúng tôi luôn lấy tiêu chuẩn chất lượng cao để cung cấp dịch vụ khách hàng. Bằng việc sử dụng các công nghệ, máy móc hiện đại.\n' +
+                    '   Cộng thêm đội ngũ thợ sửa chữa chuyên nghiệp, có tay nghề cao. Thợ Việt đã mang đến những giá trị thật sự về thời gian, chất lượng và giá cả.\n' +
+                    '   Cho dù mục đích của bạn là sửa chữa, khôi phục hay thay đổi màu sắc đồ gỗ đề phù hợp với không gian sống. Đội ngũ nhân viên chúng tôi đều đáp một cách tốt nhất.'),
+              ),
+            ),
             new Card(
               clipBehavior: Clip.antiAlias,
               child: Column(
@@ -98,21 +102,13 @@ class _ThoMocWidgetState extends State<ThoMocWidget> {
                 ],
               ),
             ),
-            new Text(
-              "Lợi ích của Thợ Việt mang lại cho Khách hàng",
-              textAlign: TextAlign.center,
-              style: new TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
+            ContentApp(
+              titleCTA: 'Lợi ích của Thợ Việt mang lại cho Khách hàng',
+              textCTA: '+ Mang lại sự phong phú, đa dạng cho khách hàng với hàng nghìn bảng màu sắc có sẳn.\n' +
+                  '+ Với một cái nhìn chuyên nghiệp, các chuyên gia của chúng tôi có thể phối hợp màu một cách hài hòa nhất.\n' +
+                  '+ Các loại sơn của chúng tôi đều có chất lượng tốt nhất trên thị trường hiện nay.\n' +
+                  '+ Sửa chữa đồ gỗ nội thất một cách nhanh chóng.',
             ),
-            new Text(
-                "+ Mang lại sự phong phú, đa dạng cho khách hàng với hàng nghìn bảng màu sắc có sẳn."),
-            new Text(
-                "+ Với một cái nhìn chuyên nghiệp, các chuyên gia của chúng tôi có thể phối hợp màu một cách hài hòa nhất."),
-            new Text(
-                "+ Các loại sơn của chúng tôi đều có chất lượng tốt nhất trên thị trường hiện nay."),
-            new Text("+ Sửa chữa đồ gỗ nội thất một cách nhanh chóng."),
             new Card(
               clipBehavior: Clip.antiAlias,
               child: Column(
@@ -126,33 +122,35 @@ class _ThoMocWidgetState extends State<ThoMocWidget> {
                 ],
               ),
             ),
-            new Text(
-              'Dịch vụ sơn sửa lại đồ gỗ nội thất',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ContentApp(
+              titleCTA: 'Dịch vụ sơn sửa lại đồ gỗ nội thất\n',
+              textCTA:
+                  '– Sơn sửa cửa sổ, cửa thông phòng, cửa đi bị sập xệ khó đóng hư hỏng cong vênh.' +
+                      '\n– Sửa chữa, sơn lại bàn ghế, giường tủ, thay hậu tủ, thay đợt tủ.' +
+                      '\n– Tủ bếp bị mốt một, xập xệ, xuống cấp.' +
+                      '\n– Sửa sơn lại cầu thang, lan can.' +
+                      '\n– Sàn gỗ bị co ngót.',
             ),
-            new Text(
-                '– Sơn sửa cửa sổ, cửa thông phòng, cửa đi bị sập xệ khó đóng hư hỏng cong vênh.' +
-                    '\n– Sửa chữa, sơn lại bàn ghế, giường tủ, thay hậu tủ, thay đợt tủ.' +
-                    '\n– Tủ bếp bị mốt một, xập xệ, xuống cấp.' +
-                    '\n– Sửa sơn lại cầu thang, lan can.' +
-                    '\n– Sàn gỗ bị co ngót.'),
-            new Text(
-              'Quy trình tiếp nhận thông tin sơn sửa đồ gỗ nội thất',
-              textAlign: TextAlign.start,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ContentApp(
+              titleCTA: 'Quy trình tiếp nhận thông tin sơn sửa đồ gỗ nội thất',
+              textCTA: '– Tiếp nhận thông tin khách hàng.' +
+                  '\n– Cho nhân viên tới khảo sát, tư vấn, báo giá.' +
+                  '\n– Sau khi thống nhất, chúng tôi triển khai công việc.' +
+                  '\n– Quý khách nghiệm thu công việc sau khi hoàn thành.' +
+                  '\n– Thanh toán và viết hóa đơn.',
             ),
-            new Text('– Tiếp nhận thông tin khách hàng.' +
-                '\n– Cho nhân viên tới khảo sát, tư vấn, báo giá.' +
-                '\n– Sau khi thống nhất, chúng tôi triển khai công việc.' +
-                '\n– Quý khách nghiệm thu công việc sau khi hoàn thành.' +
-                '\n– Thanh toán và viết hóa đơn.'),
-            new Text(
-              'Cùng Thợ Việt trải nghiệm chất lượng dịch vụ sơn sửa đồ gỗ nội thất tại nhà với đội ngũ có tay nghề cao. Luôn chuyên nghiệp, nhiệt tình mọi lúc, mọi nơi mà khách hàng yêu cầu..',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
+            Card(
+              shadowColor: Colors.grey,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                child: Text(
+                  'Cùng Thợ Việt trải nghiệm chất lượng dịch vụ sơn sửa đồ gỗ nội thất tại nhà với đội ngũ có tay nghề cao. Luôn chuyên nghiệp, nhiệt tình mọi lúc, mọi nơi mà khách hàng yêu cầu..',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
               ),
             ),
           ],
@@ -165,15 +163,8 @@ class _ThoMocWidgetState extends State<ThoMocWidget> {
     return Scaffold(
         body: new ListView(
       children: <Widget>[
-        Padding(padding: EdgeInsets.all(5)),
-        new Text(
-          "Thợ Sửa Chữa - Lắp Đặt Đồ Gỗ",
-          textAlign: TextAlign.center,
-          style: new TextStyle(
-            fontSize: 24,
-            color: Colors.red,
-            fontWeight: FontWeight.bold,
-          ),
+        ChuDeTrang(
+          titleTrang: 'Thợ Sửa Chữa - Lắp Đặt Đồ Gỗ',
         ),
         titleSection
       ],

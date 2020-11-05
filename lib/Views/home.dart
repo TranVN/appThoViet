@@ -360,7 +360,7 @@ void _dVkhac(context) {
                           borderRadius: BorderRadius.circular(10),
                           child: InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => VSNLMT()),
@@ -370,7 +370,7 @@ void _dVkhac(context) {
                             child: Center(
                               child: DVTV(
                                 urlDVTV: 'lib/images/icon_tho.png',
-                                titleDVTV: 'Vệ Sinh NLMT',
+                                titleDVTV: 'NL Mặt Trời',
                               ),
                             ),
                           ),
@@ -379,7 +379,7 @@ void _dVkhac(context) {
                           borderRadius: BorderRadius.circular(10),
                           child: InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => ThoSuaNha()),
@@ -436,12 +436,5 @@ class DVTV extends StatelessWidget {
         ),
       ],
     );
-  }
-}
-
-class DV extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

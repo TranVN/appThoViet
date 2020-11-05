@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
 class ThoDienNuoc extends StatelessWidget {
   const ThoDienNuoc({Key key}) : super(key: key);
@@ -271,15 +272,8 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
     return Scaffold(
         body: new ListView(
       children: <Widget>[
-        Padding(padding: EdgeInsets.all(5)),
-        new Text(
-          "Thợ Sửa Chữa - Lắp Đặt Điện Nước",
-          textAlign: TextAlign.center,
-          style: new TextStyle(
-            fontSize: 24,
-            color: Colors.red,
-            fontWeight: FontWeight.bold,
-          ),
+        ChuDeTrang(
+          titleTrang: 'Thợ Sửa Chữa - Lắp Đặt Điện Nước',
         ),
         titleSection
       ],

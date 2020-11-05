@@ -16,16 +16,13 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // screen rotation lock flutter https://medium.com/@greymag/flutter-orientation-lock-portrait-only-c98910ebd769
-    //WidgetsFlutterBinding.ensureInitialized();
-    // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-    //     .then((value) => runApp(MyApp()));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Thợ Sửa Máy Lạnh',
       home: HomePage(),
       theme: ThemeData(
           primarySwatch: Colors.lightBlue,
+          scaffoldBackgroundColor: Colors.white,
           textTheme: TextTheme(
               bodyText2: TextStyle(
             fontSize: 14.0,
@@ -46,12 +43,9 @@ class MyStatefulWidget extends StatefulWidget {
 
 /// This is the private State class that goes with MyStatefulWidget.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  //int _count = 0;
   var grade;
 
   Widget build(BuildContext context) {
-    // var speedDial = SpeedDial;
-
     return Scaffold(
       appBar: AppBar(
         title: Row(
@@ -65,7 +59,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ],
         ),
       ),
-
       body: Container(
           child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -90,7 +83,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         animatedIconTheme: const IconThemeData(size: 22.0),
         closeManually: true,
         curve: Curves.bounceIn,
-        tooltip: 'Toggle options',
+        tooltip: 'Thông Tin Liên Hệ',
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
         elevation: 8.0,
@@ -118,17 +111,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
       ),
-
-      //floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
     );
   }
 }
-
-// _launchURL() async {
-//   // Replace 12345678 with your tel. no.
-
-//   android_intent.Intent()
-//     ..setAction(android_action.Action.ACTION_CALL)
-//     ..setData(Uri(scheme: "tel", path: "0903532938"))
-//     ..startActivity().catchError((e) => print(e));
-// }
