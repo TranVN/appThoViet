@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
+
 // import 'package:thoviet/Shared/app_color.dart';
+var url = 'lib/images/thoDienLanh/';
 
 class ThoDienLanh extends StatelessWidget {
   const ThoDienLanh({Key key}) : super(key: key);
@@ -96,8 +98,8 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2020/06/may-lanh-chay-nuoc.jpg',
+                  Image.asset(
+                    url + 'may-lanh-chay-nuoc.jpg',
                     fit: BoxFit.cover,
                     width: 400,
                     height: 200,
@@ -133,8 +135,8 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_Tho-sua-may-lanh.jpg',
+                  Image.asset(
+                    url + 'fix_Tho-sua-may-lanh.jpg',
                     fit: BoxFit.cover,
                     width: 400,
                     height: 200,
@@ -172,8 +174,9 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_Tho-ve-sinh-rua-may-lanh-quan-1-2-3-4-5-6-7-10.jpg',
+                  Image.asset(
+                    url +
+                        'fix_Tho-ve-sinh-rua-may-lanh-quan-1-2-3-4-5-6-7-10.jpg',
                     fit: BoxFit.cover,
                     width: 400,
                     height: 200,
@@ -210,8 +213,8 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_tho-sua-may-giat-tai-nha-tphcm.jpg',
+                  Image.asset(
+                    url + 'fix_tho-sua-may-giat-tai-nha-tphcm.jpg',
                     fit: BoxFit.cover,
                     width: 400,
                     height: 200,
@@ -249,8 +252,8 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_tho-ve-sinh-may-giat.jpg',
+                  Image.asset(
+                    url + 'fix_tho-ve-sinh-may-giat.jpg',
                     fit: BoxFit.cover,
                     width: 400,
                     height: 200,
@@ -287,8 +290,8 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_tho-sua-tu-lanh-11-1.jpg',
+                  Image.asset(
+                    url + 'fix_tho-sua-tu-lanh-11-1.jpg',
                     fit: BoxFit.cover,
                     width: 400,
                     height: 200,

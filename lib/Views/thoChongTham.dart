@@ -1,7 +1,11 @@
+import 'package:appthoviet/ViewModels/KDDV.dart';
 import 'package:flutter/material.dart';
 import 'package:appthoviet/ViewModels/contentApp.dart';
 import 'package:appthoviet/ViewModels/BangGia.dart';
 import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
+
+var urlKDDV = 'lib/images/kddv/';
+var url = 'lib/images/chongTham/';
 
 class ThoChongTham extends StatelessWidget {
   const ThoChongTham({Key key}) : super(key: key);
@@ -56,25 +60,21 @@ class _ThoChongThamWidgetState extends State<ThoChongThamWidget> {
               shrinkWrap: true,
               children: <Widget>[
                 KDDV(
-                  urlImg:
-                      'https://thoviet.com.vn/wp-content/uploads/2020/07/premium-quality.png',
+                  urlImg: urlKDDV + 'efficiency.png',
                   titleKDDV: 'CHẤT LƯỢNG',
                 ),
                 KDDV(
-                  urlImg:
-                      'https://thoviet.com.vn/wp-content/uploads/2020/07/reputation.png',
+                  urlImg: urlKDDV + 'premium-quality.png',
                   titleKDDV: 'UY TÍN',
                 ),
                 KDDV(
-                  urlImg:
-                      'https://thoviet.com.vn/wp-content/uploads/2020/07/efficiency.png',
+                  urlImg: urlKDDV + 'reputation.png',
                   titleKDDV: 'HIỆU QUẢ CAO',
                 ),
               ],
             ),
             DVChongTham(
-              urlDVCT:
-                  'https://thoviet.com.vn/wp-content/uploads/2020/07/2407-20-Chong-tham-san-thuong-2.jpg',
+              urlDVCT: url + '2407-20-Chong-tham-san-thuong-2.jpg',
               titleDVCT: 'CHỐNG THẤM SÂN THƯỢNG',
               contentDVCT:
                   '+ Nhận thi công chống thấm sân thượng đã lót gạch.\n' +
@@ -82,16 +82,14 @@ class _ThoChongThamWidgetState extends State<ThoChongThamWidget> {
                       '+ Chống thấm sân thượng bằng sơn chống thấm.',
             ),
             DVChongTham(
-              urlDVCT:
-                  'https://thoviet.com.vn/wp-content/uploads/2020/07/2407-20-sua-chua-tham-tuong-nha-A-Linh-8.jpg',
+              urlDVCT: url + '2407-20-sua-chua-tham-tuong-nha-A-Linh-8.jpg',
               titleDVCT: 'XỬ LÝ CHỐNG THẤM TRONG NHÀ TẮM',
               contentDVCT: '+ Xử lý thấm nước do hộp gen.\n' +
                   '+ Xử lý thấm lỗ thoát sàn nhà tắm.\n' +
                   '+ Làm lại gạch nền xử lý thấm.',
             ),
             DVChongTham(
-              urlDVCT:
-                  'https://thoviet.com.vn/wp-content/uploads/2020/07/chongthamtuongnha.jpg',
+              urlDVCT: url + 'chongthamtuongnha.jpg',
               titleDVCT: 'CHỐNG THẤM TƯỜNG NHÀ',
               contentDVCT:
                   '+ Thi công sơn chống thấm. Xử lý nứt chân chim tường nhà.\n' +
@@ -221,7 +219,7 @@ class DVChongTham extends StatelessWidget {
               ),
             ),
           ),
-          Image.network(
+          Image.asset(
             urlDVCT,
             fit: BoxFit.cover,
             width: 400,
@@ -237,35 +235,5 @@ class DVChongTham extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-
-class KDDV extends StatelessWidget {
-  KDDV({
-    this.urlImg,
-    this.titleKDDV,
-  });
-  final String urlImg;
-  final String titleKDDV;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-        child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.network(
-          urlImg,
-          width: 60,
-          fit: BoxFit.cover,
-        ),
-        Padding(
-            padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-            child: Text(
-              titleKDDV,
-              textAlign: TextAlign.center,
-            ))
-      ],
-    ));
   }
 }

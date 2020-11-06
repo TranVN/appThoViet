@@ -4,6 +4,9 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
+var urlKDDV = 'lib/images/kddv/';
+var url = 'lib/images/thoSuaNha/';
+
 class ThoSuaNha extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -83,18 +86,15 @@ class _ThoSuaNhaWidgetState extends State<ThoSuaNhaWidget> {
               shrinkWrap: true,
               children: <Widget>[
                 KDDV(
-                  urlImg:
-                      'https://thoviet.com.vn/wp-content/uploads/2020/07/premium-quality.png',
+                  urlImg: urlKDDV + 'premium-quality.png',
                   titleKDDV: 'CHẤT LƯỢNG',
                 ),
                 KDDV(
-                  urlImg:
-                      'https://thoviet.com.vn/wp-content/uploads/2020/07/reputation.png',
+                  urlImg: urlKDDV + 'reputation.png',
                   titleKDDV: 'UY TÍN',
                 ),
                 KDDV(
-                  urlImg:
-                      'https://thoviet.com.vn/wp-content/uploads/2020/07/efficiency.png',
+                  urlImg: urlKDDV + 'efficiency.png',
                   titleKDDV: 'HIỆU QUẢ CAO',
                 ),
               ],
@@ -110,8 +110,8 @@ class _ThoSuaNhaWidgetState extends State<ThoSuaNhaWidget> {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2020/07/son-sua-nha-cu.png',
+                  Image.asset(
+                    url + 'son-sua-nha-cu.png',
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,
@@ -136,8 +136,8 @@ class _ThoSuaNhaWidgetState extends State<ThoSuaNhaWidget> {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2020/07/CSKH.png',
+                  Image.asset(
+                    url + 'CSKH.png',
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,
@@ -156,8 +156,8 @@ class _ThoSuaNhaWidgetState extends State<ThoSuaNhaWidget> {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2020/07/thietke.png',
+                  Image.asset(
+                    url + 'thietke.png',
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,
@@ -179,8 +179,8 @@ class _ThoSuaNhaWidgetState extends State<ThoSuaNhaWidget> {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2020/07/doi-tac-sua-nha-tron-goi.jpg',
+                  Image.asset(
+                    url + 'doi-tac-sua-nha-tron-goi.jpg',
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,
@@ -241,7 +241,7 @@ class KDDV extends StatelessWidget {
         child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.network(
+        Image.asset(
           urlImg,
           width: 60,
           fit: BoxFit.cover,

@@ -4,6 +4,8 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
+var url = 'lib/images/thoDien/';
+
 class ThoDien extends StatelessWidget {
   const ThoDien({Key key}) : super(key: key);
 
@@ -68,8 +70,8 @@ class ThoDienStateWidget extends State<ThoDienWidget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.network(
-              "https://thoviet.com.vn/wp-content/uploads/2017/04/tho-dien-nuoc-tphcm-quan-4.jpg",
+            Image.asset(
+              url + 'tho-dien-nuoc-tphcm-quan-4.jpg',
               fit: BoxFit.cover,
               width: 398,
               height: 150,
@@ -84,20 +86,12 @@ class ThoDienStateWidget extends State<ThoDienWidget> {
                     '- Có hoá đơn VAT, phiếu thu, giấy biên nhận giao hàng, chứng từ đầy đủ để khách hàng tiện thanh toán.'),
               ),
             ),
-            // new Text(
-            //   "BẢNG GIÁ LẮP ĐẶT - SỬA CHỮA ĐIỆN TẠI NHÀ:",
-            //   textAlign: TextAlign.center,
-            //   style: new TextStyle(
-            //     fontWeight: FontWeight.bold,
-            //     fontSize: 16,
-            //   ),
-            // ),
             new Card(
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2019/01/tho-lap-dat-dong-ho-dien-1-pha-3-pha-tphcm-1.jpg',
+                  Image.asset(
+                    url + 'tho-lap-dat-dong-ho-dien-1-pha-3-pha-tphcm-1.jpg',
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,
@@ -122,8 +116,9 @@ class ThoDienStateWidget extends State<ThoDienWidget> {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2017/11/tho-lap-den-led-trang-tri-shop-quan-ao-thoi-trang-4.jpg',
+                  Image.asset(
+                    url +
+                        'tho-lap-den-led-trang-tri-shop-quan-ao-thoi-trang-4.jpg',
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,
@@ -148,8 +143,8 @@ class ThoDienStateWidget extends State<ThoDienWidget> {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2020/05/sua-o-dien-bi-long-3.png',
+                  Image.asset(
+                    url + 'sua-o-dien-bi-long-3.png',
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,
@@ -174,8 +169,8 @@ class ThoDienStateWidget extends State<ThoDienWidget> {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2018/10/tho-lap-bong-den-dien-quan-binh-thanh.jpg',
+                  Image.asset(
+                    url + 'tho-lap-bong-den-dien-quan-binh-thanh.jpg',
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,
@@ -216,8 +211,7 @@ class ThoDienStateWidget extends State<ThoDienWidget> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_14.jpg'),
+                      image: AssetImage(url + 'fix_14.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.all(
@@ -229,8 +223,7 @@ class ThoDienStateWidget extends State<ThoDienWidget> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_11.jpg'),
+                      image: AssetImage(url + 'fix_11.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.all(
@@ -242,8 +235,7 @@ class ThoDienStateWidget extends State<ThoDienWidget> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_15.jpg'),
+                      image: AssetImage(url + 'fix_15.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.all(

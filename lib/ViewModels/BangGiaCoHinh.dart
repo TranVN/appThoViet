@@ -11,7 +11,7 @@ class BangGiaCoHinh extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
-          Image.network(
+          Image.asset(
             urlimg,
             width: 400,
             height: 180,

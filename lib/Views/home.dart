@@ -1,5 +1,5 @@
-import 'package:appthoviet/ViewModels/thoNLMT.dart';
-// import 'package:appthoviet/main.dart';
+import 'package:appthoviet/Views/thoDienNuoc.dart';
+import 'package:appthoviet/Views/thoNLMT.dart';
 import "package:flutter/material.dart";
 import 'thoChongTham.dart';
 import 'thoDien.dart';
@@ -9,10 +9,11 @@ import 'thongNghet.dart';
 import 'thoSuaMayLanh.dart';
 import 'thoSuaNha.dart';
 import 'vsBeNuoc.dart';
-// import 'mayNuocNongNLMT.dart';
 import 'thoDoNuocRoRi.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+var url = 'lib/images/';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
@@ -73,7 +74,7 @@ class HomeStateWidget extends State<HomeWidget> {
   Widget titleSection = new ClipRRect(
     borderRadius: BorderRadius.all(Radius.circular(8.0)),
     child: Image.asset(
-      'lib/images/tapthecty.png',
+      url + 'tapthecty.png',
       fit: BoxFit.cover,
       height: 200,
       width: 400,
@@ -128,7 +129,7 @@ class HomeStateWidget extends State<HomeWidget> {
                       splashColor: Colors.green[200],
                       child: Center(
                         child: DVTV(
-                          urlDVTV: 'lib/images/icon_tho.png',
+                          urlDVTV: url + 'icon_tho.png',
                           titleDVTV: 'Thợ Điện',
                         ),
                       ),
@@ -147,8 +148,27 @@ class HomeStateWidget extends State<HomeWidget> {
                       splashColor: Colors.green[200],
                       child: Center(
                         child: DVTV(
-                          urlDVTV: 'lib/images/icon_tho.png',
+                          urlDVTV: url + 'icon_tho.png',
                           titleDVTV: 'Thợ Điện Lạnh',
+                        ),
+                      ),
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ThoDienNuoc()),
+                        );
+                      },
+                      splashColor: Colors.green[200],
+                      child: Center(
+                        child: DVTV(
+                          urlDVTV: url + 'icon_tho.png',
+                          titleDVTV: 'Điện Nước',
                         ),
                       ),
                     ),
@@ -165,7 +185,7 @@ class HomeStateWidget extends State<HomeWidget> {
                       splashColor: Colors.green[200],
                       child: Center(
                         child: DVTV(
-                          urlDVTV: 'lib/images/icon_tho.png',
+                          urlDVTV: url + 'icon_tho.png',
                           titleDVTV: 'Thợ Mộc',
                         ),
                       ),
@@ -184,7 +204,7 @@ class HomeStateWidget extends State<HomeWidget> {
                       splashColor: Colors.green[200],
                       child: Center(
                         child: DVTV(
-                          urlDVTV: 'lib/images/icon_tho.png',
+                          urlDVTV: url + 'icon_tho.png',
                           titleDVTV: 'Thông Nghẹt',
                         ),
                       ),
@@ -203,7 +223,7 @@ class HomeStateWidget extends State<HomeWidget> {
                       splashColor: Colors.green[200],
                       child: Center(
                         child: DVTV(
-                          urlDVTV: 'lib/images/icon_tho.png',
+                          urlDVTV: url + 'icon_tho.png',
                           titleDVTV: 'Chống Thấm',
                         ),
                       ),
@@ -221,7 +241,7 @@ class HomeStateWidget extends State<HomeWidget> {
                       splashColor: Colors.green[200],
                       child: Center(
                         child: DVTV(
-                          urlDVTV: 'lib/images/icon_tho.png',
+                          urlDVTV: url + 'icon_tho.png',
                           titleDVTV: 'Dò Nước Rò Rỉ',
                         ),
                       ),
@@ -239,27 +259,8 @@ class HomeStateWidget extends State<HomeWidget> {
                       splashColor: Colors.green[200],
                       child: Center(
                         child: DVTV(
-                          urlDVTV: 'lib/images/icon_tho.png',
+                          urlDVTV: url + 'icon_tho.png',
                           titleDVTV: 'VS Bể Nước',
-                        ),
-                      ),
-                    ),
-                  ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ThoSuaMayLanh()),
-                        );
-                      },
-                      splashColor: Colors.green[200],
-                      child: Center(
-                        child: DVTV(
-                          urlDVTV: 'lib/images/icon_tho.png',
-                          titleDVTV: 'Sửa Máy Lạnh',
                         ),
                       ),
                     ),
@@ -273,7 +274,7 @@ class HomeStateWidget extends State<HomeWidget> {
                       splashColor: Colors.green[200],
                       child: Center(
                         child: DVTV(
-                          urlDVTV: 'lib/images/ThoKhac.png',
+                          urlDVTV: url + 'ThoKhac.png',
                           titleDVTV: 'Thợ Khác',
                         ),
                       ),
@@ -301,7 +302,7 @@ class HomeStateWidget extends State<HomeWidget> {
             ),
           ),
           Image.asset(
-            'lib/images/phieuGiamGia.jpg',
+            url + 'phieuGiamGia.jpg',
             fit: BoxFit.cover,
           ),
         ],
@@ -371,7 +372,7 @@ void _dVkhac(context) {
                             splashColor: Colors.green[200],
                             child: Center(
                               child: DVTV(
-                                urlDVTV: 'lib/images/icon_tho.png',
+                                urlDVTV: url + 'icon_tho.png',
                                 titleDVTV: 'NL Mặt Trời',
                               ),
                             ),
@@ -390,8 +391,27 @@ void _dVkhac(context) {
                             splashColor: Colors.green[200],
                             child: Center(
                               child: DVTV(
-                                urlDVTV: 'lib/images/icon_tho.png',
+                                urlDVTV: url + 'icon_tho.png',
                                 titleDVTV: 'Thợ Sửa Nhà',
+                              ),
+                            ),
+                          ),
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ThoSuaMayLanh()),
+                              );
+                            },
+                            splashColor: Colors.green[200],
+                            child: Center(
+                              child: DVTV(
+                                urlDVTV: url + 'icon_tho.png',
+                                titleDVTV: 'Sửa Máy Lạnh',
                               ),
                             ),
                           ),

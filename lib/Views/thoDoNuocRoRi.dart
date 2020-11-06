@@ -6,6 +6,8 @@ import 'package:appthoviet/ViewModels/contentApp.dart';
 import 'package:appthoviet/ViewModels/BangGia.dart';
 import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
+var url = 'lib/images/doNuocRoRi/';
+
 class DoNuocRoRi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -86,8 +88,7 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2020/06/do-tim-ro-ri-nuoc.jpg'),
+                      image: AssetImage(url + 'do-tim-ro-ri-nuoc.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.all(
@@ -99,8 +100,8 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_Do-tim-ro-ri-that-thoat-nuoc-4.jpg'),
+                      image: AssetImage(
+                          url + 'fix_Do-tim-ro-ri-that-thoat-nuoc-4.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.all(
@@ -157,22 +158,19 @@ class _DoNuocRoRiWidgetState extends State<DoNuocRoRiWidget> {
               subtitleCT: 'Giá từ: Khảo sát báo giá',
             ),
             GioiThieuMayDo(
-              urlDVCT:
-                  'https://thoviet.com.vn/wp-content/uploads/2019/07/2_abb_stethophon_04_funk_mit_zubehoer_06.jpg',
+              urlDVCT: url + '2_abb_stethophon_04_funk_mit_zubehoer_06.jpg',
               titleDVCT: 'Máy Dò SEWERIN',
               contentDVCT:
                   'Một trong những thiết bị được nhập khẩu trực tiếp từ Đức. Có khả năng dò tìm được vị trí ống nước bể ngầm độ sâu từ 2 đến 3 m. Kết hợp với các thiết bị trong cùng bộ công cụ thì dòng máy SEWERIN là một đối thủ nặng ký trong lĩnh vực dò tìm nước âm rò rỉ.',
             ),
             GioiThieuMayDo(
-              urlDVCT:
-                  'https://thoviet.com.vn/wp-content/uploads/2019/07/images.jpg',
+              urlDVCT: url + 'images.jpg',
               titleDVCT: 'Máy dò nước Gen Ear',
               contentDVCT:
                   'Xuất sứ từ Mỹ.  Sử dụng cảm biến mặt đất băng tần khá lớn. Độ nhạy: 1,00V / g ở 400 Hz (Tối đa).',
             ),
             GioiThieuMayDo(
-              urlDVCT:
-                  'https://thoviet.com.vn/wp-content/uploads/2019/07/s-l300-1.jpg',
+              urlDVCT: url + 's-l300-1.jpg',
               titleDVCT: 'Máy Dò Hydro Lux',
               contentDVCT:
                   'Là máy dò tìm chuyên dụng dành cho các đường ống có dộ sâu lớn, qua nhiều vật liệu cứng như nền xi măng, đường nhựa, bê tông... sửa dụng công nghệ Xem và nghe rò rỉ với công nghệ DSA với chất lượng âm thanh cao.',
@@ -208,7 +206,7 @@ class GioiThieuMayDo extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
-          Image.network(
+          Image.asset(
             urlDVCT,
             fit: BoxFit.cover,
             width: 400,

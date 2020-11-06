@@ -4,6 +4,8 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
+var url = 'lib/images/thoMoc/';
+
 class ThoMoc extends StatelessWidget {
   const ThoMoc({Key key}) : super(key: key);
 
@@ -81,8 +83,8 @@ class _ThoMocWidgetState extends State<ThoMocWidget> {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2019/01/tho-moc-son-sua-do-go-68.jpg',
+                  Image.asset(
+                    url + 'tho-moc-son-sua-do-go-68.jpg',
                     width: 400,
                     height: 200,
                     fit: BoxFit.cover,
@@ -113,8 +115,8 @@ class _ThoMocWidgetState extends State<ThoMocWidget> {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2019/01/tho-moc-son-sua-do-go-57.jpg',
+                  Image.asset(
+                    url + 'tho-moc-son-sua-do-go-57.jpg',
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,

@@ -3,6 +3,8 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
+var url = 'lib/images/thoDienNuoc/';
+
 class ThoDienNuoc extends StatelessWidget {
   const ThoDienNuoc({Key key}) : super(key: key);
 
@@ -98,8 +100,8 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2017/03/Banner-sua-dien-nuoc-dien-lanh-hcm.jpg',
+                  Image.asset(
+                    url + 'Banner-sua-dien-nuoc-dien-lanh-hcm.jpg',
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,
@@ -130,8 +132,8 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_dien-1-pha-tho-sua-dien.jpg'),
+                      image:
+                          AssetImage(url + 'fix_dien-1-pha-tho-sua-dien.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.all(
@@ -143,8 +145,8 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2018/11/tho-sua-dien-3-pha-tai-quan-2.jpg'),
+                      image:
+                          AssetImage(url + 'tho-sua-dien-3-pha-tai-quan-2.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.all(
@@ -173,6 +175,7 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
                 '– Vệ sinh bồn chứa nước gia đình, súc rửa bể chứa nước tòa nhà công ty.\n' +
                 '  Ngoài ra: Thợ Việt còn cung cấp đội ngũ thợ điện lạnh chuyên dịch vụ như lắp đặt máy lạnh, sửa điện lạnh, sửa chữa máy lạnh, tủ lạnh, vệ sinh rửa máy lạnh, lắp đặt, sửa chữa vệ sinh máy giặt, lắp đặt sửa chữa máy tắm nóng, sửa lò vi sóng….\n'),
             new GridView.count(
+              primary: false,
               padding: const EdgeInsets.all(5),
               crossAxisCount: 2,
               crossAxisSpacing: 5.0,
@@ -182,8 +185,8 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2018/12/Lap-ong-nuoc-nong-nang-luong-mat-troi-cho-nha-dan-tan-phu-1.jpg'),
+                      image: AssetImage(url +
+                          'Lap-ong-nuoc-nong-nang-luong-mat-troi-cho-nha-dan-tan-phu-1.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.all(
@@ -195,8 +198,8 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2018/12/Lap-ong-nuoc-nong-nang-luong-mat-troi-cho-nha-dan-tan-phu-8.jpg'),
+                      image: AssetImage(url +
+                          'Lap-ong-nuoc-nong-nang-luong-mat-troi-cho-nha-dan-tan-phu-8.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.all(

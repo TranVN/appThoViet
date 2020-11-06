@@ -1,9 +1,13 @@
 import 'package:appthoviet/ViewModels/contentApp.dart';
 import 'package:appthoviet/ViewModels/ctyThoViet.dart';
+import 'package:appthoviet/Views/thoSuaMayLanh.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
+
+// khai bao bien
+var url = 'lib/images/VSBN/';
 
 class VSBN extends StatelessWidget {
   @override
@@ -97,17 +101,17 @@ class _VSBNWidgetState extends State<VSBNWidget> {
               mainAxisSpacing: 5.0,
               shrinkWrap: true,
               children: <Widget>[
-                KDDV(
-                  urlImg:
-                      'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_ve-sinh-bon-nuoc-inox-quan-11-5-e1544773389848-1.jpg',
+                HinhContent(
+                  urlImage: url +
+                      'fix_ve-sinh-bon-nuoc-inox-quan-11-5-e1544773389848-1.jpg',
                 ),
-                KDDV(
-                  urlImg:
-                      'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_ve-sinh-bon-nuoc-inox-quan-11-5-e1544773389848-7.jpg',
+                HinhContent(
+                  urlImage: url +
+                      'fix_ve-sinh-bon-nuoc-inox-quan-11-5-e1544773389848-7.jpg',
                 ),
-                KDDV(
-                  urlImg:
-                      'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_ve-sinh-bon-nuoc-inox-quan-11-5-e1544773389848-9.jpg',
+                HinhContent(
+                  urlImage: url +
+                      'fix_ve-sinh-bon-nuoc-inox-quan-11-5-e1544773389848-9.jpg',
                 ),
               ],
             ),

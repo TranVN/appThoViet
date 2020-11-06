@@ -5,6 +5,8 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/BangGiaCoHinh.dart';
 import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
+var url = 'lib/images/thoSuaMayLanh/';
+
 class ThoSuaMayLanh extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -88,20 +90,18 @@ class _ThoSuaMayLanhWigetState extends State<ThoSuaMayLanhWiget> {
               ),
             ),
             BangGiaCoHinh(
-              urlimg:
-                  'https://thoviet.com.vn/wp-content/uploads/2019/02/suamaylanh.png',
+              urlimg: url + 'suamaylanh.png',
               titleBG: 'Thay tụ chạy block máy nén máy 1-1,5hp',
               gia: 'Giá từ: 350.000đ',
             ),
             BangGiaCoHinh(
-              urlimg:
-                  'https://thoviet.com.vn/wp-content/uploads/2018/11/Tho-sua-may-lanh.jpg',
+              urlimg: url + 'Tho-sua-may-lanh.jpg',
               titleBG: 'Thay tụ chạy block máy nén máy 2-2,5hp',
               gia: 'Giá từ: 450.000đ - 550.000đ',
             ),
             BangGiaCoHinh(
-              urlimg:
-                  'https://thoviet.com.vn/wp-content/uploads/2017/03/Tho-dien-lanh-sua-may-lanh_tho-viet-2-e1541128658283.jpg',
+              urlimg: url +
+                  'Tho-dien-lanh-sua-may-lanh_tho-viet-2-e1541128658283.jpg',
               titleBG: 'Thay cánh quạt dàn nóng',
               gia: 'Giá từ: 300.000đ',
             ),
@@ -185,44 +185,14 @@ class _ThoSuaMayLanhWigetState extends State<ThoSuaMayLanhWiget> {
               mainAxisSpacing: 5.0,
               shrinkWrap: true,
               children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2018/09/tho-sua-dien-lanh-tai-nha-quan-9.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(5.0),
-                    ),
-                  ),
-                  // padding: const EdgeInsets.all(8),
+                HinhContent(
+                  urlImage: url + 'tho-sua-dien-lanh-tai-nha-quan-9.jpg',
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_thao-lap-may-lanh-tai-quan-2.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(5.0),
-                    ),
-                  ),
-                  // padding: const EdgeInsets.all(8),
+                HinhContent(
+                  urlImage: url + 'fix_thao-lap-may-lanh-tai-quan-2.jpg',
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2017/04/Tho-sua-may-lanh-tai-nha.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(5.0),
-                    ),
-                  ),
-                  // padding: const EdgeInsets.all(8),
+                HinhContent(
+                  urlImage: url + 'Tho-sua-may-lanh-tai-nha.jpg',
                 ),
               ],
             ),
@@ -258,5 +228,25 @@ class _ThoSuaMayLanhWigetState extends State<ThoSuaMayLanhWiget> {
         titleSection
       ],
     ));
+  }
+}
+
+class HinhContent extends StatelessWidget {
+  HinhContent({this.urlImage});
+  final String urlImage;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(urlImage),
+          fit: BoxFit.cover,
+        ),
+        borderRadius: BorderRadius.all(
+          Radius.circular(5.0),
+        ),
+      ),
+      // padding: const EdgeInsets.all(8),
+    );
   }
 }
