@@ -1,3 +1,5 @@
+import 'package:appthoviet/ViewModels/thoNLMT.dart';
+// import 'package:appthoviet/main.dart';
 import "package:flutter/material.dart";
 import 'thoChongTham.dart';
 import 'thoDien.dart';
@@ -7,7 +9,7 @@ import 'thongNghet.dart';
 import 'thoSuaMayLanh.dart';
 import 'thoSuaNha.dart';
 import 'vsBeNuoc.dart';
-import 'thoVSNLMT.dart';
+// import 'mayNuocNongNLMT.dart';
 import 'thoDoNuocRoRi.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -363,7 +365,7 @@ void _dVkhac(context) {
                               Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => VSNLMT()),
+                                    builder: (context) => TabBarNLMT()),
                               );
                             },
                             splashColor: Colors.green[200],
