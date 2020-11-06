@@ -7,6 +7,9 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
+var urlKDDV = 'lib/images/kddv/';
+var url = 'lib/images/mayNuocNong/';
+
 class MayNuocNongNLMT extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -88,22 +91,21 @@ class _MayNuocNongNLMTWidgetState extends State<MayNuocNongNLMTWidget> {
               shrinkWrap: true,
               children: <Widget>[
                 KDDV(
-                  urlImg: 'lib/images/kddv/efficiency.png',
+                  urlImg: urlKDDV + 'efficiency.png',
                   titleKDDV: 'CHẤT LƯỢNG',
                 ),
                 KDDV(
-                  urlImg: 'lib/images/kddv/premium-quality.png',
+                  urlImg: urlKDDV + 'premium-quality.png',
                   titleKDDV: 'UY TÍN',
                 ),
                 KDDV(
-                  urlImg: 'lib/images/kddv/reputation.png',
+                  urlImg: urlKDDV + 'reputation.png',
                   titleKDDV: 'HIỆU QUẢ CAO',
                 ),
               ],
             ),
             DVChongTham(
-              urlDVCT:
-                  'lib/images/mayNuocNong/lap-may-nang-luong-mat-troi-768x432.jpg',
+              urlDVCT: url + 'lap-may-nang-luong-mat-troi-768x432.jpg',
               titleDVCT: 'Lắp Đặt Máy Nước Nóng NLMT',
               contentDVCT:
                   '   + Là thiết bị sử dụng ánh nắng mặt trời, khi đó nguồn nhiệt sẽ được hấp thụ vào ống đầu mà chuyển hóa thành nhiệt giúp làm nóng nước trong bình\n' +
@@ -111,8 +113,7 @@ class _MayNuocNongNLMTWidgetState extends State<MayNuocNongNLMTWidget> {
                       '   + Giá lắp đặt giao động vào khoảng 300.000đ – 600.000đ',
             ),
             DVChongTham(
-              urlDVCT:
-                  'lib/images/mayNuocNong/sua-may-nuoc-nong-nang-luong.jpg',
+              urlDVCT: url + 'sua-may-nuoc-nong-nang-luong.jpg',
               titleDVCT: 'Thợ Sửa Chữa Bình Nước Nóng Năng Lượng Mặt Trời',
               contentDVCT: '+ Tư vấn, thi công, lắp đặt bình nước nóng năng lượng mặt trời.\n' +
                   '+ Lắp đặt, sửa chữa máy bơm tăng áp nóng lạnh.\n' +
@@ -123,8 +124,7 @@ class _MayNuocNongNLMTWidgetState extends State<MayNuocNongNLMTWidget> {
                   '+ Thay mới bình bảo ôn, chân bình năng lượng, ống nước nóng lạnh PPR.\n',
             ),
             DVChongTham(
-              urlDVCT:
-                  'lib/images/mayNuocNong/sua-may-nuoc-nong-nang-luong-mat-troi.gif',
+              urlDVCT: url + 'sua-may-nuoc-nong-nang-luong-mat-troi.gif',
               titleDVCT: 'Vệ Sinh Máy Nước Nóng Năng Lượng Mặt Trời',
               contentDVCT: '+ Nhân viên kĩ thuật lịch sự, làm việc đúng hẹn, thao tác làm việc gọn gàng sạch sẽ, không làm ảnh hưởng đến công việc của khách hàng.\n' +
                   '+ Tư vấn hướng dẫn khách hàng sử dụng đúng cách hoàn toàn miễn phí.\n' +

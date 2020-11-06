@@ -7,6 +7,9 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:appthoviet/ViewModels/ChuDeTrang.dart';
 
+var urlKDDV = 'lib/images/kddv/';
+var url = 'lib/images/pinMatTroi/';
+
 class PinMatTroi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -88,21 +91,21 @@ class _PinMatTroiWidgetState extends State<PinMatTroiWidget> {
               shrinkWrap: true,
               children: <Widget>[
                 KDDV(
-                  urlImg: 'lib/images/kddv/efficiency.png',
+                  urlImg: urlKDDV + 'efficiency.png',
                   titleKDDV: 'CHẤT LƯỢNG',
                 ),
                 KDDV(
-                  urlImg: 'lib/images/kddv/premium-quality.png',
+                  urlImg: urlKDDV + 'premium-quality.png',
                   titleKDDV: 'UY TÍN',
                 ),
                 KDDV(
-                  urlImg: 'lib/images/kddv/reputation.png',
+                  urlImg: urlKDDV + 'reputation.png',
                   titleKDDV: 'HIỆU QUẢ CAO',
                 ),
               ],
             ),
             DVChongTham(
-              urlDVCT: 'lib/images/pinMatTroi/nha-may-nang-luong-mat-troi.jpg',
+              urlDVCT: url + 'nha-may-nang-luong-mat-troi.jpg',
               titleDVCT: 'Lắp Đặt Tấm Pin Mặt Trời',
               contentDVCT:
                   'Khi khách hàng có nhu cầu lắp đặt pin mặt trời, chúng tôi sẽ cử đội ngũ nhân viên kỹ thuật có tay nghề cao. Nhân viên của Thợ Việt sẽ tư vấn và đưa ra phương án lắp đặt phù hợp. Thợ Việt Chuyên nhận lắp đặt pin mặt trời:\n' +
@@ -110,8 +113,7 @@ class _PinMatTroiWidgetState extends State<PinMatTroiWidget> {
                       '   + Lắp đặt pin mặt trời trên mặt đất',
             ),
             DVChongTham(
-              urlDVCT:
-                  'lib/images/pinMatTroi/lap-dat-he-thong-pin-mat-troi-1.jpg',
+              urlDVCT: url + 'lap-dat-he-thong-pin-mat-troi-1.jpg',
               titleDVCT: 'Sửa Chữa Tấm Pin Mặt Trời',
               contentDVCT:
                   'Đội ngũ nhân viên sửa chữa pin năng lượng mặt trời của chúng tôi chuyên:\n' +
@@ -120,8 +122,7 @@ class _PinMatTroiWidgetState extends State<PinMatTroiWidget> {
                       'Chúng tôi đảm bảo sử dụng các linh kiện chính hãng từ các nhà sản xuất có uy tín.',
             ),
             DVChongTham(
-              urlDVCT:
-                  'lib/images/pinMatTroi/hieu-qua-cua-viec-ve-sinh_result-768x512.jpg',
+              urlDVCT: url + 'hieu-qua-cua-viec-ve-sinh_result-768x512.jpg',
               titleDVCT: 'Dịch Vụ Vệ Sinh Tấm Pin Mặt Trời',
               contentDVCT:
                   'Chúng tôi sẽ cử một đội ngũ nhân viên vệ sinh pin mặt trời chuyên nghiệp. Và đảm bảo rằng nhân viên vệ sinh của Thợ Việt sẽ:\n' +
@@ -142,8 +143,7 @@ class _PinMatTroiWidgetState extends State<PinMatTroiWidget> {
                   '– Bảo hành và khuyến mãi .\n',
             ),
             DVChongTham(
-              urlDVCT:
-                  'lib/images/pinMatTroi/cach-ve-sinh-tam-nang-luong-mat-troi.jpg',
+              urlDVCT: url + 'cach-ve-sinh-tam-nang-luong-mat-troi.jpg',
               titleDVCT: 'Cách Vệ Sinh Tấm Pin Mặt Trời Tại Nhà',
               contentDVCT:
                   '   + Sử dụng máy xịt nước xịt trực tiếp lên bề mặt tấm pin.\n' +
