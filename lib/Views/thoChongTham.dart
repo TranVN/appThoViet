@@ -1,3 +1,4 @@
+import 'package:appthoviet/ViewModels/ActionCard.dart';
 import 'package:appthoviet/ViewModels/KDDV.dart';
 import 'package:flutter/material.dart';
 import 'package:appthoviet/ViewModels/contentApp.dart';
@@ -107,6 +108,7 @@ class _ThoChongThamWidgetState extends State<ThoChongThamWidget> {
                   'Chống thấm sàn bê tông, bằng giải pháp phủ màng chống thấm dạng lỏng liền mạch; vật liệu chống thấm gốc polyurethane, arylic 1 thành phần đồng nhất',
               subtitleCT: 'Giá từ: 270,000 đ/m²',
             ),
+            ActionCardButton(),
             BangGia(
               titleCT: 'Phương án thi công chống thấm 3',
               contentCT:

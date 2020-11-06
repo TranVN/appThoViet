@@ -1,3 +1,4 @@
+import 'package:appthoviet/ViewModels/ActionCard.dart';
 import 'package:appthoviet/ViewModels/contentApp.dart';
 import 'package:appthoviet/ViewModels/ctyThoViet.dart';
 import 'package:flutter/material.dart';
@@ -328,33 +329,6 @@ class _ThoDienLanhState extends State<ThoDienLanhWidget> {
           titleSection
         ],
       ),
-    );
-  }
-}
-
-class ActionCardButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ButtonBar(
-      alignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        IconButton(
-          icon: Icon(Icons.call),
-          color: Colors.blue,
-          tooltip: 'Hotline: 0903532938',
-          onPressed: () {
-            launch("tel://0903532938");
-          },
-        ),
-        IconButton(
-          icon: Icon(Icons.message),
-          color: Colors.blue,
-          tooltip: 'Zalo me : 0903532938',
-          onPressed: () {
-            launch('https://zalo.me/0903532938');
-          },
-        ),
-      ],
     );
   }
 }
